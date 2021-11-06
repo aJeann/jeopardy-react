@@ -156,7 +156,7 @@ const PlayerCards = () => {
                     </Card.Body>
                 </Card>
             </Col>    
-            <Col>
+            {/* <Col>
                 <Card style={{ width: '18rem', backgroundColor: "orange" }}>
                     <Card.Body>
                     <Card.Title
@@ -195,7 +195,7 @@ const PlayerCards = () => {
                         </Card.Text>
                     </Card.Body>
                 </Card>
-            </Col>      
+            </Col>    */}   
             </Row>
         </div>
     )

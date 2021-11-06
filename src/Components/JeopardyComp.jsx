@@ -25,7 +25,7 @@ const JeopardyComp = () => {
         {
             id: 0,
             name: "Maträttskändisar",
-            questions: ["Denna svävande maträtt delar namn med en av huvudkaraktärerna i Twilight", "Lunchmåltid för de som är försiktiga med kalorierna som för tankarna till en känd kejsare", "En klassisk svensk maträtt som delar namn med en av Sveriges mest kända författare", "Före detta landslagsback delar namn med denna klassiker som ofta finns med på julbordet", "Denna folkkära musiker kommer inte från Mora men han delar namn med detta frokustpålägg"],
+            questions: ["Denna svävande maträtt delar namn med en av huvudkaraktärerna i Twilight", "Lunchmåltid för de som är försiktiga med kalorierna för tankarna till en känd kejsare", "En klassisk svensk maträtt som delar namn med en av Sveriges mest kända författare", "Före detta landslagsback delar namn med denna klassiker som ofta finns med på julbordet", "Denna folkkära musiker kommer inte från Mora men han delar namn med detta frokustpålägg"],
             answers: ["Vad är Flygande Jacob?", "Vad är Caesarsallad?", "Vad är Biff Rydberg?", "Vad är Janssons frestelse?", "Vad är Kalles Kaviar?"]      
         },
         {
@@ -37,7 +37,7 @@ const JeopardyComp = () => {
         {
             id: 2,
             name: "Choklad",
-            questions: ["Denna box med praliner delar namn med en mattflygande disneyprins", "Denna himlakropp ligger allra närmast hjärtat för många", "Bra att äta om man är go' o glad", "Denna välkända fyrdelade bar delar namn med både en nyfödd och en vuxen på engelska", "Denna vill man ha om man är nära havet och vill uttrycka sin förvåning på blattesvenska"],
+            questions: ["Denna box med praliner delar namn med en mattflygande disneyprins", "Denna himlakropp ligger allra närmast hjärtat för många", "Bra att äta om man är go' o glad", "Denna välkända fyrdelade bar delar namn med både en nyfödd och en vuxen på engelska", "Denna vill man ha om man säger hav på spanska och vill uttrycka sin förvåning på blattesvenska"],
             answers: ["Vad är Aladdin?", "Vad är Mars?", "Vad är kexchoklad?", "Vad är kitkat", "Vad är marabou?"]    
         },
         {
