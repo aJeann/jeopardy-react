@@ -13,8 +13,8 @@ const JeopardyComp = () => {
     console.log(storageArray);
 
     if(!storageArray.includes(true)){
-        sessionStorage.setItem("currentQuestion", JSON.stringify(["Final Jeopardy", "Banker", "Denna bank är Sveriges bästa", "Vilken är Swedbank?"]))
-        history.push('/question');
+        sessionStorage.setItem("currentQuestion", JSON.stringify(["Final Jeopardy", "Champions League", "Detta är det enda laget utanför PL, La liga, Serie A och Bundesliga som vunnit CL under 2000-talet", "Vilket är Porto?"]))
+        history.push('/final-jeopardy');
     }
   
     let currentId = 0;
