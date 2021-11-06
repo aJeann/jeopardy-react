@@ -124,7 +124,7 @@ const PlayerCards = () => {
                             onClick={removePoints}
                             style={{cursor: 'not-allowed'}}
                         >
-                        Player 1
+                        Åke
                         </Card.Title>
                         <Card.Text
                             id="p1" 
@@ -144,7 +144,7 @@ const PlayerCards = () => {
                             onClick={removePoints}
                             style={{cursor: 'not-allowed'}}
                         >
-                        Player 2
+                        Katarina
                         </Card.Title>
                         <Card.Text
                             id="p2" 

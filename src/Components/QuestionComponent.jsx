@@ -21,7 +21,7 @@ const QuestionComponent = () => {
 
             <Container style={{textAlign: 'center', height: '40rem'}}>
                 <h1 style={{color: 'white', paddingTop: '5%', fontSize: '80px', cursor: 'help'}} onClick={HandleClick}>{questionAnswered ? qArray[1] : qArray[2]}</h1>
-                <TimerComp toggle={activeState} time={30}/>
+                <TimerComp toggle={activeState} time={20}/>
 
             </Container>
                             
