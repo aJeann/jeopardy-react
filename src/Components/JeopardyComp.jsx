@@ -105,7 +105,7 @@ const JeopardyComp = () => {
     console.log(storageArray);
 
     if(!storageArray.includes(true) && round === numberOfRounds){
-        sessionStorage.setItem("currentQuestion", JSON.stringify(["Final Jeopardy", "Champions League", "Detta är det enda laget utanför PL, La liga, Serie A och Bundesliga som vunnit CL under 2000-talet", "Vilket är Porto?"]))
+        sessionStorage.setItem("currentQuestion", JSON.stringify(["Final Jeopardy", "Kemiska beteckningar", "Kemiska beteckningen för syre", "Vad är O?"]))
         history.push('/final-category');
     }
 

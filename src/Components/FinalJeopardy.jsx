@@ -48,42 +48,68 @@ const FinalJeopardy = () => {
     }
 
     const addPoints = (e) => {
+        let totalV;
         switch(e.target.id){
             case 'p1Correct': {
                 setP1Score(p1Score + Number(sessionStorage.getItem("p1Bet")));
+                let p1Bet = Number(sessionStorage.getItem("p1Bet"));
+                totalV = p4Score + p1Bet;
+                sessionStorage.setItem("p1Score", totalV);
                 break;
             }
             case 'p2Correct': {
                 setP2Score(p2Score + Number(sessionStorage.getItem("p2Bet")));
+                let p2Bet = Number(sessionStorage.getItem("p2Bet"));
+                totalV = p4Score + p2Bet;
+                sessionStorage.setItem("p2Score", totalV);
                 break;
             }
             case 'p3Correct': {
                 setP3Score(p3Score + Number(sessionStorage.getItem("p3Bet")));
+                let p3Bet = Number(sessionStorage.getItem("p3Bet"));
+                totalV = p4Score + p3Bet;
+                sessionStorage.setItem("p3Score", totalV);
                 break;
             }
             case 'p4Correct': {
                 setP4Score(p4Score + Number(sessionStorage.getItem("p4Bet")));
+                let p4Bet = Number(sessionStorage.getItem("p4Bet"));
+                totalV = p4Score + p4Bet;
+                sessionStorage.setItem("p4Score", totalV);
                 break;
             }
         }
     }
 
     const removePoints = (e) => {
+        let totalV;
         switch(e.target.id){
             case 'p1Wrong': {
                 setP1Score(p1Score - Number(sessionStorage.getItem("p1Bet")));
+                let p1Bet = Number(sessionStorage.getItem("p1Bet"));
+                totalV = p4Score - p1Bet;
+                sessionStorage.setItem("p1Score", totalV);
                 break;
             }
             case 'p2Wrong': {
                 setP2Score(p2Score - Number(sessionStorage.getItem("p2Bet")));
+                let p2Bet = Number(sessionStorage.getItem("p2Bet"));
+                totalV = p4Score - p2Bet;
+                sessionStorage.setItem("p2Score", totalV);
                 break;
             }
             case 'p3Wrong': {
                 setP3Score(p3Score - Number(sessionStorage.getItem("p3Bet")));
+                let p3Bet = Number(sessionStorage.getItem("p3Bet"));
+                totalV = p4Score - p3Bet;
+                sessionStorage.setItem("p3Score", totalV);
                 break;
             }
             case 'p4Wrong': {
                 setP4Score(p4Score - Number(sessionStorage.getItem("p4Bet")));
+                let p4Bet = Number(sessionStorage.getItem("p4Bet"));
+                totalV = p4Score - p4Bet;
+                sessionStorage.setItem("p4Score", totalV);
                 break;
             }
         }
