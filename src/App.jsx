@@ -8,11 +8,12 @@ import FooterComponent from './Components/FooterComponent';
 import QuestionComponent from './Components/QuestionComponent';
 import FinalJeopardy from './Components/FinalJeopardy';
 import ResultsComponent from './Components/ResultsComponent';
+import FinalCategory from './Components/FinalCategory';
 
 const App = () => {
 
   return (
-    <div className="App">
+    <div className="App" style={{height: '100%'}}>
       <Router>
         <HeaderComponent />
             <Switch>  
@@ -20,10 +21,10 @@ const App = () => {
               <Route path="/question" component = {QuestionComponent}></Route>
               <Route path="/final-jeopardy" component = {FinalJeopardy}></Route>
               <Route path="/results" component = {ResultsComponent}></Route>
+              <Route path="/final-category" component = {FinalCategory}></Route>
             </Switch>
         
       </Router>
-      <FooterComponent />
     </div>
   );
 }
