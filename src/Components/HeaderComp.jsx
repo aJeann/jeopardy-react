@@ -20,7 +20,6 @@ const HeaderComponent = () => {
     const [player4, setPlayer4] = useState();
     const [player5, setPlayer5] = useState();
 
-
     useEffect(() => {
         setCurrentRound(sessionStorage.getItem("currentRound"))
     })
@@ -28,7 +27,7 @@ const HeaderComponent = () => {
     const stateArray = [];
     const tempArray = [];
 
-    for (let index = 0; index < 25; index++) {
+    for (let index = 0; index < 30; index++) {
         if(index === 0) stateArray.push(false);
         stateArray.push(true);    
     }
@@ -37,7 +36,7 @@ const HeaderComponent = () => {
         sessionStorage.setItem("stateArray", JSON.stringify(stateArray));
         sessionStorage.setItem("currentQuestion", JSON.stringify(["Question", "Answer"]));
         sessionStorage.setItem("valueOfQ", 0);
-        sessionStorage.setItem("seconds", 30)
+        sessionStorage.setItem("seconds", 40)
         sessionStorage.setItem("rounds", 1);
         sessionStorage.setItem("currentRound", 1);
         sessionStorage.setItem("p1Name", "Player 1");
@@ -48,12 +47,13 @@ const HeaderComponent = () => {
     }
 
     const resetGame = () => {
-        for (let index = 0; index < 25; index++) {
+        for (let index = 0; index < 30; index++) {
             if(index === 0) tempArray.push(false)
             tempArray.push(true);    
             sessionStorage.setItem("stateArray", JSON.stringify(tempArray))
         }
         sessionStorage.setItem("p1Score", 0); sessionStorage.setItem("p2Score", 0); sessionStorage.setItem("p3Score", 0); sessionStorage.setItem("p4Score", 0);
+        sessionStorage.setItem("p5Score", 0); 
 
         sessionStorage.setItem("currentRound", 1);
     }
@@ -122,11 +122,11 @@ const HeaderComponent = () => {
                                 </a>
                             </li>
                         </ul>
-                        <ul className="justify-content-end">
+                        {/* <ul className="justify-content-end">
                             <li>
                                 <h5 style={{paddingTop: '20px', color: 'white'}}>Nuvarande runda: {currentRound}/{sessionStorage.getItem("rounds")}</h5>
                             </li>
-                        </ul>
+                        </ul> */}
                     </div>
                     <li>
                         <Sidebar />         
@@ -212,6 +212,19 @@ const HeaderComponent = () => {
                     onChange={updatePlayerNames}
                     />
                     <Button variant="outline-secondary" id="p4" onClick={savePlayerNames}>
+                    Spara
+                    </Button>
+                </InputGroup>
+                <InputGroup className="mb-3">
+                    <Form.Label>Spelare 5: </Form.Label>
+                    <FormControl
+                    placeholder="Byt namn"
+                    id="p5"
+                    aria-label="Uppdatera fråge-timer"
+                    aria-describedby="basic-addon2"
+                    onChange={updatePlayerNames}
+                    />
+                    <Button variant="outline-secondary" id="p5" onClick={savePlayerNames}>
                     Spara
                     </Button>
                 </InputGroup>

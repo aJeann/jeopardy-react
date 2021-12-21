@@ -10,21 +10,24 @@ const FinalJeopardy = () => {
     const [p2Name, setP2Name] = useState(sessionStorage.getItem("p2Name"));
     const [p3Name, setP3Name] = useState(sessionStorage.getItem("p3Name"));
     const [p4Name, setP4Name] = useState(sessionStorage.getItem("p4Name"));
+    const [p5Name, setP5Name] = useState(sessionStorage.getItem("p5Name"));
 
     const [showButton, setShowButton] = useState(false);
 
-    let p1; let p2; let p3; let p4;
+    let p1; let p2; let p3; let p4;let p5;
     if(sessionStorage.getItem("p1Score")){
         p1 = sessionStorage.getItem("p1Score");
         p2 = sessionStorage.getItem("p2Score");
         p3 = sessionStorage.getItem("p3Score");
         p4 = sessionStorage.getItem("p4Score");
+        p5 = sessionStorage.getItem("p5Score");
     }
 
     const [p1Score, setP1Score] = useState(Number(p1));
     const [p2Score, setP2Score] = useState(Number(p2));
     const [p3Score, setP3Score] = useState(Number(p3));
     const [p4Score, setP4Score] = useState(Number(p4));
+    const [p5Score, setP5Score] = useState(Number(p5));
 
     let qArray = sessionStorage.getItem("currentQuestion");
     qArray = JSON.parse(qArray);
@@ -53,21 +56,21 @@ const FinalJeopardy = () => {
             case 'p1Correct': {
                 setP1Score(p1Score + Number(sessionStorage.getItem("p1Bet")));
                 let p1Bet = Number(sessionStorage.getItem("p1Bet"));
-                totalV = p4Score + p1Bet;
+                totalV = p1Score + p1Bet;
                 sessionStorage.setItem("p1Score", totalV);
                 break;
             }
             case 'p2Correct': {
                 setP2Score(p2Score + Number(sessionStorage.getItem("p2Bet")));
                 let p2Bet = Number(sessionStorage.getItem("p2Bet"));
-                totalV = p4Score + p2Bet;
+                totalV = p2Score + p2Bet;
                 sessionStorage.setItem("p2Score", totalV);
                 break;
             }
             case 'p3Correct': {
                 setP3Score(p3Score + Number(sessionStorage.getItem("p3Bet")));
                 let p3Bet = Number(sessionStorage.getItem("p3Bet"));
-                totalV = p4Score + p3Bet;
+                totalV = p3Score + p3Bet;
                 sessionStorage.setItem("p3Score", totalV);
                 break;
             }
@@ -76,6 +79,13 @@ const FinalJeopardy = () => {
                 let p4Bet = Number(sessionStorage.getItem("p4Bet"));
                 totalV = p4Score + p4Bet;
                 sessionStorage.setItem("p4Score", totalV);
+                break;
+            }
+            case 'p5Correct': {
+                setP5Score(p5Score + Number(sessionStorage.getItem("p5Bet")));
+                let p5Bet = Number(sessionStorage.getItem("p5Bet"));
+                totalV = p5Score + p5Bet;
+                sessionStorage.setItem("p5Score", totalV);
                 break;
             }
         }
@@ -87,21 +97,21 @@ const FinalJeopardy = () => {
             case 'p1Wrong': {
                 setP1Score(p1Score - Number(sessionStorage.getItem("p1Bet")));
                 let p1Bet = Number(sessionStorage.getItem("p1Bet"));
-                totalV = p4Score - p1Bet;
+                totalV = p1Score - p1Bet;
                 sessionStorage.setItem("p1Score", totalV);
                 break;
             }
             case 'p2Wrong': {
                 setP2Score(p2Score - Number(sessionStorage.getItem("p2Bet")));
                 let p2Bet = Number(sessionStorage.getItem("p2Bet"));
-                totalV = p4Score - p2Bet;
+                totalV = p2Score - p2Bet;
                 sessionStorage.setItem("p2Score", totalV);
                 break;
             }
             case 'p3Wrong': {
                 setP3Score(p3Score - Number(sessionStorage.getItem("p3Bet")));
                 let p3Bet = Number(sessionStorage.getItem("p3Bet"));
-                totalV = p4Score - p3Bet;
+                totalV = p3Score - p3Bet;
                 sessionStorage.setItem("p3Score", totalV);
                 break;
             }
@@ -110,6 +120,13 @@ const FinalJeopardy = () => {
                 let p4Bet = Number(sessionStorage.getItem("p4Bet"));
                 totalV = p4Score - p4Bet;
                 sessionStorage.setItem("p4Score", totalV);
+                break;
+            }
+            case 'p5Wrong': {
+                setP5Score(p5Score - Number(sessionStorage.getItem("p5Bet")));
+                let p5Bet = Number(sessionStorage.getItem("p5Bet"));
+                totalV = p5Score - p5Bet;
+                sessionStorage.setItem("p5Score", totalV);
                 break;
             }
         }
@@ -236,6 +253,35 @@ const FinalJeopardy = () => {
                                         Rätt
                                     </Button>
                                     <Button variant="danger" id="p4Wrong" onClick={removePoints}>
+                                        Fel
+                                    </Button>
+                                </ButtonGroup>           
+                                </Row>              
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </Col>   
+                    <Col>
+                        <Card style={{ width: '18rem', backgroundColor: "teal" }}>
+                            <Card.Body>
+                            <Card.Title
+                                    id="p5"
+                                    style={{cursor: 'not-allowed'}}
+                                >
+                                    {p5Name}                                
+                                </Card.Title>
+                                <Card.Text
+                                    id="p5" 
+                                    style={{cursor: 'cell'}}
+                                >
+                                {p5Score}
+                                {'('+(sessionStorage.getItem("p5Bet"))+')'}
+                                <Row>
+                                <ButtonGroup>
+                                    <Button variant="success" id="p5Correct" onClick={addPoints}>
+                                        Rätt
+                                    </Button>
+                                    <Button variant="danger" id="p5Wrong" onClick={removePoints}>
                                         Fel
                                     </Button>
                                 </ButtonGroup>           

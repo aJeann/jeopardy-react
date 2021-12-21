@@ -23,14 +23,14 @@ const FinalCategory = () => {
         p2 = sessionStorage.getItem("p2Score");
         p3 = sessionStorage.getItem("p3Score");
         p4 = sessionStorage.getItem("p4Score");
-        p5 = sessionStorage.getItem("p5score");
+        p5 = sessionStorage.getItem("p5Score");
     }
     else{
         sessionStorage.setItem("p1Score", 0);
         sessionStorage.setItem("p2Score", 0);
         sessionStorage.setItem("p3Score", 0);
         sessionStorage.setItem("p4Score", 0);
-        sessionStorage.setItem("p5score", 0)
+        sessionStorage.setItem("p5Score", 0);
     }
 
     const [p1Score, setP1Score] = useState(Number(p1));
@@ -87,7 +87,7 @@ const FinalCategory = () => {
             case 'p5':
                 {
                     setP5Score(p5Score + valueOfQ);
-                    totalV = p4Score + valueOfQ;
+                    totalV = p5Score + valueOfQ;
                     sessionStorage.setItem("p5Score", totalV);
                     break;
                             }
@@ -104,35 +104,35 @@ const FinalCategory = () => {
                     totalV = p1Score - valueOfQ;
                     sessionStorage.setItem("p1Score", totalV);
                     break;
-                            }            
+                }            
             case 'p2':
                 {
                     setP2Score(p2Score - valueOfQ);
                     totalV = p2Score - valueOfQ;
                     sessionStorage.setItem("p2Score", totalV);
                     break;
-                            }   
+                }   
             case 'p3': 
                 {
                     setP3Score(p3Score - valueOfQ);
                     totalV = p3Score - valueOfQ;
                     sessionStorage.setItem("p3Score", totalV);
                     break;
-                            }   
+                }   
             case 'p4':
                 {
                     setP4Score(p4Score - valueOfQ);
                     totalV = p4Score - valueOfQ;
                     sessionStorage.setItem("p4Score", totalV);
                     break;
-                            }   
+                    }   
             case 'p5':
                 {
                     setP5Score(p5Score - valueOfQ);
-                    totalV = p4Score - valueOfQ;
+                    totalV = p5Score - valueOfQ;
                     sessionStorage.setItem("p5Score", totalV);
                     break;
-                            }   
+                }   
         }
     }
 
@@ -162,6 +162,12 @@ const FinalCategory = () => {
                 console.log(p4Bet);
                 break;
             }
+            case 'p5Bet':
+                {
+                setP5Bet(e.target.value)
+                console.log(p5Bet);
+                break;
+                }
         }
     }
 
@@ -187,6 +193,12 @@ const FinalCategory = () => {
                 sessionStorage.setItem("p4Bet", p4Bet);
                 break;
             }
+            case 'p5Bet':
+            {
+                sessionStorage.setItem("p5Bet", p5Bet);
+                break;
+            }
+
         }
     }
 
@@ -325,6 +337,37 @@ const FinalCategory = () => {
                             </Card.Body>
                         </Card>
                     </Col>   
+                    <Col>
+                        <Card style={{ width: '18rem', backgroundColor: "teal" }}>
+                            <Card.Body>
+                            <Card.Title
+                                    id="p5"
+                                    onClick={removePoints}
+                                    style={{cursor: 'not-allowed'}}
+                                >
+                                    {p5Name}                                
+                                </Card.Title>
+                                <Card.Text
+                                    id="p5" 
+                                    onClick={handleClick}
+                                    style={{cursor: 'cell'}}
+                                >
+                                {sessionStorage.getItem("p5Score")}
+                                <InputGroup className="mb-3">
+                                        <FormControl
+                                        aria-label="Example text with button addon"
+                                        aria-describedby="basic-addon1"
+                                        id="p5Bet"
+                                        onChange={updateBet}
+                                        />
+                                        <Button variant="outline-secondary" id="p5Bet" onClick={saveBet}>
+                                        Spara
+                                        </Button>                                    
+                                    </InputGroup>                            
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </Col>  
                 </Row>
             </Container>
                             

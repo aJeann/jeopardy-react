@@ -40,55 +40,92 @@ const JeopardyComp = () => {
     const [arrayOf, setArrayOf] = useState([
         {
             id: 0,
-            name: "Förvirrande svengelska",
-            questions: ["Puss på engelska men något helt annat på svenska",
-             "Allt har en början men kanske inte särskilt smart att säga motsatsen om man är i USA",
-              "Are you good at cooking?",
-                "Ibland kan man få en sån i registret men det betyder inte att man är en skitstövel",
-               "Ibland kan det gå lite snabbt men man får vara försiktig med gasen"],
-            answers: ["Vad är Kiss?", "Vad är Slut?", "Vad är Kock?", "Vad är Prick?", "Vad är Fart?"]      
+            name: "2020+1",
+            questions: ['Låt & artist?',
+             "Låt & artist?",
+             "Låt & artist?",
+              "Låt & artist?",
+                "Låt & artist?"],
+            answers: ["Molly Sanden(Will F), Jaja ding dong", "Klara Klingström, Behöver inte dig idag", "ABBA, I still have faith in you", "Victor Leksell & Miriam Bryant, Tystnar i luren", "Newkid, Du måste finnas"],
+            typeOf: 'song',
+            start: [15, 0, 120, 35, 0],
+            end: [45, 30, 150, 65, 30],
+            link: ['PlBUH8zMZng', 'JfICxQEHlos', 'hWGWFa3jznI', 'F5vK1bN8zmU', 'tTD6eHBBu5I']
         },
         {
             id: 1,
-            name: "12 + 21 = 121",
-            questions: ["Kallas dagen före juldagen... Sveriges största tidning",
-                    "Mest sedda TV-serien på Netflix... TV-serie som utspelas i Westeros baserad på böcker skrivna av George R.R Martin",
-                    "Känt gröntområde i New York... Park designad av Gaudi i Barcelona",
-                    "Englands drottning ... Spelade Keira Knightley i Pirates of the Caribbean",
-                    "Största fotbollsturneringen för klubblag... Extremt populärt datorspel utvecklat av Riot Games"],
-            answers: ["Vad är Jul(afton)bladet?", "Vad är Squid (Game) of Thrones?", "Vad är Central (Park) Güell?", "Vad är Drottning (Elizabeth) Swann?", "Vad är Champions (League) of Legends?"]    
+            name: "Svenska musikvideos?",
+            questions: ["Låt och artist",
+                    "Låt och artist",
+                    "Låt och artist",
+                    "Låt och artist",
+                    "Låt och artist"],
+            answers: ["Magnus Uggla, Kung för en dag", "ABBA, Waterloo", "Earth, Wind and Fire, September", "Laleh, Bara få va mig själv", "Veronica Maggio, Vi mot världen"],
+            typeOf: 'video',
+            start: [0, 0, 0, 0, 0],
+            end: [60, 30, 40, 30, 30],
+            link: ['7aOc2fL2pRM', 'Sj_9CiNkkn4', 'Gs069dndIYk', 'tzln6GO4yHY', 'pGUbe0bhOys']
         },
         {
             id: 2,
-            name: "Jul-igt",
-            questions: ["Detta kvinnliga förnamn betyder mer eller mindre den ungdomliga och var ena halvan i ett drama skrivet av Shakespeare",
-                        "Denna upfinning gjorde det helt klart lättare att få saker i rullning",
-                        "Kanske inte den första månaden man kommer att tänka på när man säger 'jul'",                        
-                        "Svensk butikskedja grundad av Lars-Göran Blank med 'inget kan stoppa dig nu' som slogan",
-                        "En klinkbyggd båttyp med bred tvär"],
-            answers: ["Vad är Julia?", "Vad är Hjulet?", "Vem är Juli?", "Vad är Jula?", "Vad är Julle?"]    
+            name: "Valsen 10",
+            questions: ["Låt och artist",
+                        "Låt och artist",
+                        "Låt och artist",
+                        "Låt och artist",                        
+                        "Låt och artist"
+                        ],
+            answers: ["Ed Sheeran, Shape of you", "Magnus Uggla, Trubaduren", "Kent, Dom andra", "Helene Sjöholm, Gabriellas sång", "U2, With or without you"],
+            typeOf: 'song',
+            start: [0, 0, 15, 0, 0],
+            end: [30, 50, 60, 40, 50],
+            link: ['JGwWNGJdvx8', 'kIbXAmGeovk', 'fWxUr_vDwwE', '_L-GDA7OOLM', 'EzeDqRhM09w']
         },
         {
             id: 3,
-            name: "Diverse rekord",
-            questions: ["Denna video om en liten hajfamilj är den mest sedda på youtube",
-             "Denna dessvärre avlidna svensk har mest spelningar på spotify",
-              "Denna James Cameron-film är fortfarande den mest inkomstbringande filmen någonsin",
-               "Den mest sålda boken någonsin trots att den kanske inte jätterolig att läsa",
-                "Detta är världens dyraste aktie, främst på grund av att den aldrig genomgått en split"],
-            answers: ["Vad är 'Baby Shark Dance'?", "Vem är Avicii?", "Vilken är Avatar?", "Vilken är bibeln?", "Vilken är Berkshire Hathaway?"]    
+            name: "To be continued",
+            questions: [
+             "Avsluta versen",
+              "Avsluta versen",
+              "Avsluta versen",
+               "Avsluta versen",
+                "Avsluta versen"],
+            answers: ["Ända från New Dehli till Moskva", "You can dance, you can jive", "Himlen så(är) oskyldigt blå", "Jag kommer inte hem ikväll", "Whether you're a brother or whether you're a mother"],
+            typeOf: 'video',
+            start: [50, 0, 40, 30, 5],
+            end: [77, 21, 59, 69, 33],
+            link: ['wOuKVk4yjW0', 'xFrGuyw1V8s', '_kSdTPigq60', 'b64sjtHF5Gw', 'fNFzfwLM72c']
         },
         {
             id: 4,
-            name: "Decemberdagar",
-            questions: ["Detta brukar vi 'fira' den 24: December i Sverige",
-             "Denna sydkoreanska artist mest känd för super-hiten 'Gangam Style' föddes den 31:a December",
-              "Den 10:e December 2006 blev denna man första svensk i rymden",
-               "Svensk kung som regerade 1611-1632 föddes den 9:e December och anses vara den som lade grunden för stormaktstiden",
-                "1:a December 1991 lämnade detta land sovjetunionen"],
-            answers: ["Vad är julafton?", "Vem är PSY?", "Vem är Christer Fuglesang?", "Vem är Gustav II Adolf?", "Vad är Ukraina?"]    
+            name: "Världshits",
+            questions: ["Låt och artist",
+            "Låt och artist",
+             "Låt och artist",
+               "Låt och artist",
+                "Låt och artist"],
+            answers: ["Bonnie Tyler, Total eclipse of the heart", "Scorpions, Wind of change", "Beatles, Let it be", "Survivor, Eye of the tiger", "Dolly Parton, 9 to 5"],
+            typeOf: 'song',
+            start: [0, 0, 0, 0, 0],
+            end: [30, 30, 16, 21, 10],
+            link: ['lcOxhH8N3Bo', 'n4RjJKxsamQ', 'QDYfEBY9NM4', 'btPJPFnesV4', 'UbxUSsFXYo4']
         },
+        {
+            id: 5,
+            name: 'Eurovision',
+            questions: ["För vilket land tävlade denna låt",
+                        "För vilket land tävlade denna låt",
+                        "För vilket land tävlade denna låt",
+                        "För vilket land tävlade denna låt",
+                        "För vilket land tävlade denna låt"],
+            answers: ["Sverige", "Island", "Italien", "Ukraina", "Nederländerna"],
+            typeOf: 'video',
+            start: [5, 83, 0, 0, 52],
+            end: [40, 105, 30, 82],
+            link: ['fELp2fPI8wI', '1zTbVRPh5EI', 'w1f6o1HQBvg', 'U7-dxzp6Jvs', '51u5fnyrGj4']
+        }
     ]);
+
 
 
     const [round, setRound] = useState(sessionStorage.getItem("currentRound"));
@@ -105,13 +142,13 @@ const JeopardyComp = () => {
     console.log(storageArray);
 
     if(!storageArray.includes(true) && round === numberOfRounds){
-        sessionStorage.setItem("currentQuestion", JSON.stringify(["Final Jeopardy", "Kemiska beteckningar", "Kemiska beteckningen för syre", "Vad är O?"]))
+        sessionStorage.setItem("currentQuestion", JSON.stringify(["Final Jeopardy", "Svensk historia", "Denna man som delar förnamn med en känd fransk konung var sveriges första statsminister", "Vem var Louis de Geer?"]))
         history.push('/final-category');
     }
 
     if(!storageArray.includes(true) && round !== numberOfRounds){
         alert("Slut på första rundan!");
-        for (let index = 0; index < 25; index++) {
+        for (let index = 0; index < 30; index++) {
             if(index === 0) tempArray.push(false)
             tempArray.push(true);    
             sessionStorage.setItem("stateArray", JSON.stringify(tempArray))
@@ -127,7 +164,6 @@ const JeopardyComp = () => {
     const valueArray = [200, 400, 600, 800, 1000];
 
     
-
     const printQuestion = (e) => {
         sessionStorage.setItem("valueOfQ", e.target.textContent)
         let tempNum = Number(e.target.value)
@@ -135,27 +171,32 @@ const JeopardyComp = () => {
         sessionStorage.setItem("stateArray", JSON.stringify(storageArray));
         let chosenQ = [];
         if(tempNum < 5){
-            chosenQ = [arrayOf[0].name, arrayOf[0].questions[tempNum], arrayOf[0].answers[tempNum]];
+            chosenQ = [arrayOf[0].name, arrayOf[0].questions[tempNum], arrayOf[0].answers[tempNum], arrayOf[0].typeOf, arrayOf[0].start[tempNum], arrayOf[0].end[tempNum], arrayOf[0].link[tempNum]];
             sessionStorage.setItem("currentQuestion", JSON.stringify(chosenQ));
         }
         else if(tempNum > 4 && tempNum < 10 ){
             tempNum = tempNum - 5;
-            chosenQ = [arrayOf[1].name, arrayOf[1].questions[tempNum], arrayOf[1].answers[tempNum]];
+            chosenQ = [arrayOf[1].name, arrayOf[1].questions[tempNum], arrayOf[1].answers[tempNum], arrayOf[1].typeOf, arrayOf[1].start[tempNum], arrayOf[1].end[tempNum], arrayOf[1].link[tempNum]];
             sessionStorage.setItem("currentQuestion", JSON.stringify(chosenQ));
         }
         else if(tempNum > 9 && tempNum < 15 ){
             tempNum = tempNum - 10;
-            chosenQ = [arrayOf[2].name, arrayOf[2].questions[tempNum], arrayOf[2].answers[tempNum]];
+            chosenQ = [arrayOf[2].name, arrayOf[2].questions[tempNum], arrayOf[2].answers[tempNum], arrayOf[2].typeOf, arrayOf[2].start[tempNum], arrayOf[2].end[tempNum], arrayOf[2].link[tempNum]];
             sessionStorage.setItem("currentQuestion", JSON.stringify(chosenQ));  
         }
         else if(tempNum > 14 && tempNum < 20 ){
             tempNum = tempNum - 15;
-            chosenQ = [arrayOf[3].name, arrayOf[3].questions[tempNum], arrayOf[3].answers[tempNum]];
+            chosenQ = [arrayOf[3].name, arrayOf[3].questions[tempNum], arrayOf[3].answers[tempNum], arrayOf[3].typeOf, arrayOf[3].start[tempNum], arrayOf[3].end[tempNum], arrayOf[3].link[tempNum]];
+            sessionStorage.setItem("currentQuestion", JSON.stringify(chosenQ));
+        }
+        else if(tempNum > 19 && tempNum < 25){
+            tempNum = tempNum - 20;
+            chosenQ = [arrayOf[4].name, arrayOf[4].questions[tempNum], arrayOf[4].answers[tempNum], arrayOf[4].typeOf, arrayOf[4].start[tempNum], arrayOf[4].end[tempNum], arrayOf[4].link[tempNum]];
             sessionStorage.setItem("currentQuestion", JSON.stringify(chosenQ));
         }
         else{
-            tempNum = tempNum - 20;
-            chosenQ = [arrayOf[4].name, arrayOf[4].questions[tempNum], arrayOf[4].answers[tempNum]];
+            tempNum = tempNum - 25;
+            chosenQ = [arrayOf[5].name, arrayOf[5].questions[tempNum], arrayOf[5].answers[tempNum], arrayOf[5].typeOf, arrayOf[5].start[tempNum], arrayOf[5].end[tempNum], arrayOf[5].link[tempNum]];
             sessionStorage.setItem("currentQuestion", JSON.stringify(chosenQ));
         }
      
@@ -165,47 +206,46 @@ const JeopardyComp = () => {
 
     return (
         <div style={{paddingBottom: '40px', backgroundColor: '#f5f5f5'}}>
-            <Container>
                 <Row style={{textAlign: 'center', fontWeight: 'bolder'}}>
                     {arrayOf.map(
                         arrayOf => 
-                            <Col>
-                                <label style={{borderRadius: '10%', marginTop: "5px", width: '220px', height: '80px', fontSize: '18px', textAlign: 'center', paddingTop: '15px'}}>{(arrayOf.name).toUpperCase()}</label>
+                            <Col style={{marginLeft: '40px'}}>
+                                <label style={{borderRadius: '10%', marginTop: "5px", width: '250px', height: '80px', fontSize: '18px', textAlign: 'center', paddingTop: '15px'}}>{(arrayOf.name).toUpperCase()}</label>
                                 <Row>
-                                    <Button variant="info" value={currentId++} key={currentId} id={arrayOf.name} style={{width: '250px', height: '160px', marginTop: '10px', fontSize: '25px'}} onClick={printQuestion}>
-                                        {storageArray[currentId] === true ? valueArray[0] : ''}
+                                    <Button variant="info" value={currentId++} key={currentId} id={arrayOf.name} style={{width: '280px', height: '160px', marginTop: '10px', fontSize: '25px'}} onClick={printQuestion}>
+                                    {storageArray[currentId] === true ? valueArray[0] : ''}
                                     </Button>
                                 </Row>
                                 
                                 <Row>
-                                    <Button variant="info" value={currentId++} key={currentId} id={arrayOf.name} style={{width: '250px', height: '160px', marginTop: '10px', fontSize: '25px'}} onClick={printQuestion}>
+                                    <Button variant="info" value={currentId++} key={currentId} id={arrayOf.name} style={{width: '280px', height: '160px', marginTop: '10px', fontSize: '25px'}} onClick={printQuestion}>
                                     {storageArray[currentId] === true ? valueArray[1] : ''}
                                     </Button>
                                 </Row>
                                 
                                 <Row>
-                                    <Button variant="info" value={currentId++} key={currentId} id={arrayOf.name} style={{width: '250px', height: '160px', marginTop: '10px', fontSize: '25px'}} onClick={printQuestion}>
+                                    <Button variant="info" value={currentId++} key={currentId} id={arrayOf.name} style={{width: '280px', height: '160px', marginTop: '10px', fontSize: '25px'}} onClick={printQuestion}>
                                     {storageArray[currentId] === true ? valueArray[2] : ''}
                                     </Button>
                                 </Row>
                                 
                                 <Row>
-                                    <Button variant="info" value={currentId++} key={currentId} id={arrayOf.name} style={{width: '250px', height: '160px', marginTop: '10px', fontSize: '25px'}} onClick={printQuestion}>
+                                    <Button variant="info" value={currentId++} key={currentId} id={arrayOf.name} style={{width: '280px', height: '160px', marginTop: '10px', fontSize: '25px'}} onClick={printQuestion}>
                                     {storageArray[currentId] === true ? valueArray[3] : ''}
                                     </Button>
                                 </Row>
                                 
                                 <Row>
-                                    <Button variant="info" value={currentId++} key={currentId} id={arrayOf.name} style={{width: '250px', height: '160px', marginTop: '10px', fontSize: '25px'}} onClick={printQuestion}>
+                                    <Button variant="info" value={currentId++} key={currentId} id={arrayOf.name} style={{width: '280px', height: '160px', marginTop: '10px', fontSize: '25px'}} onClick={printQuestion}>
                                     {storageArray[currentId] === true ? valueArray[4] : ''}
                                     </Button>
                                 </Row>
+                                
                             
                             </Col>
 
                     )}      
                 </Row>
-            </Container>   
         </div>
     )
 }

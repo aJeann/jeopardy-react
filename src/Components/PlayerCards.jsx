@@ -26,14 +26,8 @@ const PlayerCards = () => {
         p2 = sessionStorage.getItem("p2Score");
         p3 = sessionStorage.getItem("p3Score");
         p4 = sessionStorage.getItem("p4Score");
-        p5 = sessionStorage.getItem("p5score");
-    }
-    else{
-        sessionStorage.setItem("p1Score", 0);
-        sessionStorage.setItem("p2Score", 0);
-        sessionStorage.setItem("p3Score", 0);
-        sessionStorage.setItem("p4Score", 0);
-        sessionStorage.setItem("p5score", 0)
+        p5 = sessionStorage.getItem("p5Score");
+
     }
 
     const [p1Score, setP1Score] = useState(Number(p1));
@@ -41,6 +35,7 @@ const PlayerCards = () => {
     const [p3Score, setP3Score] = useState(Number(p3));
     const [p4Score, setP4Score] = useState(Number(p4));
     const [p5Score, setP5Score] = useState(Number(p5));
+
      
     const handleClick = (e) => {
         
@@ -79,7 +74,7 @@ const PlayerCards = () => {
             case 'p5':
                 {
                     setP5Score(p5Score + valueOfQ);
-                    totalV = p4Score + valueOfQ;
+                    totalV = p5Score + valueOfQ;
                     sessionStorage.setItem("p5Score", totalV);
                     break;
                             }
@@ -121,10 +116,10 @@ const PlayerCards = () => {
             case 'p5':
                 {
                     setP5Score(p5Score - valueOfQ);
-                    totalV = p4Score - valueOfQ;
+                    totalV = p5Score - valueOfQ;
                     sessionStorage.setItem("p5Score", totalV);
                     break;
-                            }   
+                }   
         }
     }
 
@@ -191,7 +186,7 @@ const PlayerCards = () => {
                     </Card.Body>
                 </Card>
             </Row>
-            <Row>           
+            <Row style={{marginBottom: '20px'}}>           
                 <Card style={{ width: '18rem', backgroundColor: "teal" }}>
                     <Card.Body>
                     <Card.Title
@@ -207,6 +202,26 @@ const PlayerCards = () => {
                             style={{cursor: 'cell'}}
                         >
                         {p4Score}                            
+                        </Card.Text>
+                    </Card.Body>
+                </Card>  
+            </Row>
+            <Row>           
+                <Card style={{ width: '18rem', backgroundColor: "white" }}>
+                    <Card.Body>
+                    <Card.Title
+                            id="p5"
+                            onClick={removePoints}
+                            style={{cursor: 'not-allowed'}}
+                        >
+                        {p5Name}
+                        </Card.Title>
+                        <Card.Text
+                            id="p5" 
+                            onClick={handleClick}
+                            style={{cursor: 'cell'}}
+                        >
+                        {p5Score}                            
                         </Card.Text>
                     </Card.Body>
                 </Card>  

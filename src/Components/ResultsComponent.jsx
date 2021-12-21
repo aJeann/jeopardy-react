@@ -7,11 +7,13 @@ const ResultsComponent = () => {
     const player2 = sessionStorage.getItem("p2Name");
     const player3 = sessionStorage.getItem("p3Name");
     const player4 = sessionStorage.getItem("p4Name");
+    const player5 = sessionStorage.getItem("p5Name");
 
     const player1Score = sessionStorage.getItem("p1Score");
     const player2Score = sessionStorage.getItem("p2Score");
     const player3Score = sessionStorage.getItem("p3Score");
     const player4Score = sessionStorage.getItem("p4Score");
+    const player5Score = sessionStorage.getItem("p5Score");
 
     const numOfPlayers = sessionStorage.getItem("numOfPlayers");
 
@@ -32,6 +34,10 @@ const ResultsComponent = () => {
     resultsArray.push({
         'name': player4,
         'score': player4Score
+    });
+    resultsArray.push({
+        'name': player5,
+        'score': player5Score
     });
 
     const dynamicSort = (property) => {
@@ -77,7 +83,6 @@ const ResultsComponent = () => {
                         height: 5
                     }}
                 />
-                <h4>Fjärde: {resultsArray[3].name + '(' + resultsArray[3].score + ')'}</h4>
 
             </Container>
         </div>
