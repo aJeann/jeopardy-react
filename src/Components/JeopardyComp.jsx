@@ -289,8 +289,8 @@ const JeopardyComp = () => {
     }
 
     return (
-        <div style={{paddingBottom: '40px', backgroundColor: '#f5f5f5'}}>
-                <Row style={{textAlign: 'center', fontWeight: 'bolder'}}>
+        <div style={{paddingBottom: '60px', backgroundColor: '#f5f5f5'}}>
+                <Row style={{textAlign: 'center', fontWeight: 'bolder', marginLeft: '15px'}}>
                     {arrayOf.map(
                         arrayOf => 
                             <Col>
