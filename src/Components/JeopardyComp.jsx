@@ -290,11 +290,11 @@ const JeopardyComp = () => {
 
     return (
         <div style={{paddingBottom: '60px', backgroundColor: '#f5f5f5'}}>
-                <Row style={{textAlign: 'center', fontWeight: 'bolder', marginLeft: '15px'}}>
+                <Row style={{fontWeight: 'bolder', marginLeft: '30px'}}>
                     {arrayOf.map(
                         arrayOf => 
                             <Col>
-                                <label style={{borderRadius: '10%', marginTop: "5px", width: '260px', height: '60px', fontSize: '18px', textAlign: 'center', paddingTop: '15px'}}>{(arrayOf.name).toUpperCase()}</label>
+                                <label style={{borderRadius: '10%', marginTop: "5px", width: '260px', height: '60px', fontSize: '18px', paddingTop: '15px'}}>{(arrayOf.name).toUpperCase()}</label>
                                 <Row>
                                     <Button value={currentId++} key={currentId} id={arrayOf.name} style={styleBtn} onClick={printQuestion}>
                                     {storageArray[currentId] === true ? valueArray[0] : ''}
