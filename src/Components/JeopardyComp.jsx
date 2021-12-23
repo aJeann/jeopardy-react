@@ -130,15 +130,17 @@ const JeopardyComp = () => {
                 {
                     id: 1,
                     name: "12 + 21 = 121",
-                    questions: ["Smeknamn för larmet som testas måndag 15.00 en gång i kvartalet ... Luuks kompanjon i på spåret",
+                    questions: [
                      "Timme när man kan fynda på krogen ... Gammalt tidtagarur med sand",
                       "Eagle på ett par 3-hål ... Brittiskt pojkband som gjort bästa låten nånsin",
                       "Gör att man blir diskad på 100 meter ... Fotbollstränaren skickar ut dessa utvalda vid matchstart",
+                      "Engelska ordet för ström ... Svensk matkedja med gulblå logga",
                        "Jacka som ofta har oranget innerfoder och bars av piloter ... Gammal TV-serie med Steve-O och Johnny Knoxville"],
-                    answers: ["Hesa (Fredrik) Lindström?",
+                    answers: [
                      "Happy (Hour)Glass",
                       "Hole in (One) Direction",
                        "Tjuv(Start)elva",
+                       "Engelska ordet för ström ... Svensk matkedja med gulblå logga",
                         "Bomber(Jacka)ss"],
                     typeOf: '',
                     start: [],
