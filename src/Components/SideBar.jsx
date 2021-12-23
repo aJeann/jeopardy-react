@@ -20,7 +20,7 @@ const Sidebar = () => {
         <div className="sidebar" style={{position: 'relative', zIndex: '0'}}>
             <Link to='#' className="menu-bars" onClick={showSidebar} style={{fontSize: '20px'}}>
                 Scoreboard
-                <FaIcons.FaBars size={40} style={{color: 'aqua', marginLeft: '5px'}}/>
+                <FaIcons.FaBars size={40} style={{color: 'blue', marginLeft: '5px'}}/>
             </Link>
         </div>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>

@@ -4,129 +4,10 @@ import { useHistory } from 'react-router';
 
 const JeopardyComp = () => {
 
-    /* const [arrayOf, setArrayOf] = useState([
-        {
-            id: 0,
-            name: "Maträttskändisar",
-            questions: ["Denna svävande maträtt delar namn med en av huvudkaraktärerna i Twilight", "Lunchmåltid för de som är försiktiga med kalorierna för tankarna till en känd kejsare", "En klassisk svensk maträtt som delar namn med en av Sveriges mest kända författare", "Före detta landslagsback delar namn med denna klassiker som ofta finns med på julbordet", "Denna folkkära musiker kommer inte från Mora men han delar namn med detta frokustpålägg"],
-            answers: ["Vad är Flygande Jacob?", "Vad är Caesarsallad?", "Vad är Biff Rydberg?", "Vad är Janssons frestelse?", "Vad är Kalles Kaviar?"]      
-        },
-        {
-            id: 1,
-            name: "12 + 21 = 121",
-            questions: ["Fotbollslag som brukar kallas Red devils... Internationell organisation som skapades för att främja samarbete", "Nuvarande kung... Längdskidsåkande konung", "Världens mest kända energidryck... hundras som finns i både engelsk och fransk variant", "Två under par på ett par 3-hål... Något som är unikt på engelska", "Används för att mata in data från användaren till datorn... Ett av världens största vinområden beläget i Frankrike"],
-            answers: ["Vad är Manchester (United) Nations?", "Vad är Kung Carl (Gustaf) Vasa?", "Vad är Red (Bull) Dog?", "Vad är Hole in (One) of a kind?", "Vad är Tangent (Bord) Eaux?"]    
-        },
-        {
-            id: 2,
-            name: "Formula 1",
-            questions: ["Detta stalls bilar brukar kallas silver arrows trots att bilen för närvarande har ett svart chassi", "Ett av de mest framgångsrika stallen de senaste åren som ägs av företaget bakom världens mest kända energidryck", "Michael Schumacher och Lewis Hamilton delar tillsammans på rekordet för antalet världsmästerskap med så här många troféer vardera", "Denna blixtsnabba förare var vid sin debut den yngsta föraren någonsin i formel 1 med sina 17 år och 166 dagar", "Detta stall vann det första F1-världsmäterskapet någonsin år 1958"],
-            answers: ["Vilka är Mercedes?", "Vilka är Red Bull?", "Vad är 7?", "Vem är Max Verstappen?", "Vilka är vanwall?"]    
-        },
-        {
-            id: 3,
-            name: "Växter som inte bara är växter",
-            questions: ["Kan man behöva göra om lufttrycket i däcken blir lågt", "På musiken i skolan fick man ibland testa detta instrument", "Lång på engelska, men ett träd på svenska", "Används för att kunna gå All-in i poker", "Handflata på engelska men utan nötter"],
-            answers: ["Vad är Pumpa?", "Vad är Gurka?", "Vad är Brysselkål?", "Vad är Chips?", "Vad är Palm?"]    
-        },
-        {
-            id: 4,
-            name: "Kända arenor",
-            questions: ["Sveriges största arena", "Detta är ingen bro även om namnet kan få en att tro det", "Denna vita koloss representerar solen i Sweden Solar System", "Arenan vars namn betyder nya fältet(på katalanska) är en av europas största", "Om du söker efter ett grönområde i Köpenhamn så kommer du mest troligt hit istället"],
-            answers: ["Vilken är Friends arena?", "Vilken är Stamford Bridge?", "Vilken är Globen?", "Vilken är Nou camp", "Vilken är Parken?"]    
-        },
-    ]); */
+    let currentId = 0;
+    const valueArray = [200, 400, 600, 800, 1000];
 
-    const [arrayOf, setArrayOf] = useState([
-        {
-            id: 0,
-            name: "2020+1",
-            questions: ['Låt & artist?',
-             "Låt & artist?",
-             "Låt & artist?",
-              "Låt & artist?",
-                "Låt & artist?"],
-            answers: ["Molly Sanden(Will F), Jaja ding dong", "Klara Klingström, Behöver inte dig idag", "ABBA, I still have faith in you", "Victor Leksell & Miriam Bryant, Tystnar i luren", "Newkid, Du måste finnas"],
-            typeOf: 'song',
-            start: [15, 0, 120, 35, 0],
-            end: [45, 30, 150, 65, 30],
-            link: ['PlBUH8zMZng', 'JfICxQEHlos', 'hWGWFa3jznI', 'F5vK1bN8zmU', 'tTD6eHBBu5I']
-        },
-        {
-            id: 1,
-            name: "Svenska musikvideos?",
-            questions: ["Låt och artist",
-                    "Låt och artist",
-                    "Låt och artist",
-                    "Låt och artist",
-                    "Låt och artist"],
-            answers: ["Magnus Uggla, Kung för en dag", "ABBA, Waterloo", "Earth, Wind and Fire, September", "Laleh, Bara få va mig själv", "Veronica Maggio, Vi mot världen"],
-            typeOf: 'video',
-            start: [0, 0, 0, 0, 0],
-            end: [60, 30, 40, 30, 30],
-            link: ['7aOc2fL2pRM', 'Sj_9CiNkkn4', 'Gs069dndIYk', 'tzln6GO4yHY', 'pGUbe0bhOys']
-        },
-        {
-            id: 2,
-            name: "Valsen 10",
-            questions: ["Låt och artist",
-                        "Låt och artist",
-                        "Låt och artist",
-                        "Låt och artist",                        
-                        "Låt och artist"
-                        ],
-            answers: ["Ed Sheeran, Shape of you", "Magnus Uggla, Trubaduren", "Kent, Dom andra", "Helene Sjöholm, Gabriellas sång", "U2, With or without you"],
-            typeOf: 'song',
-            start: [0, 0, 15, 0, 0],
-            end: [30, 50, 60, 40, 50],
-            link: ['JGwWNGJdvx8', 'kIbXAmGeovk', 'fWxUr_vDwwE', '_L-GDA7OOLM', 'EzeDqRhM09w']
-        },
-        {
-            id: 3,
-            name: "To be continued",
-            questions: [
-             "Avsluta versen",
-              "Avsluta versen",
-              "Avsluta versen",
-               "Avsluta versen",
-                "Avsluta versen"],
-            answers: ["Ända från New Dehli till Moskva", "You can dance, you can jive", "Himlen så(är) oskyldigt blå", "Jag kommer inte hem ikväll", "Whether you're a brother or whether you're a mother"],
-            typeOf: 'video',
-            start: [50, 0, 40, 30, 5],
-            end: [77, 21, 59, 69, 33],
-            link: ['wOuKVk4yjW0', 'xFrGuyw1V8s', '_kSdTPigq60', 'b64sjtHF5Gw', 'fNFzfwLM72c']
-        },
-        {
-            id: 4,
-            name: "Världshits",
-            questions: ["Låt och artist",
-            "Låt och artist",
-             "Låt och artist",
-               "Låt och artist",
-                "Låt och artist"],
-            answers: ["Bonnie Tyler, Total eclipse of the heart", "Scorpions, Wind of change", "Beatles, Let it be", "Survivor, Eye of the tiger", "Dolly Parton, 9 to 5"],
-            typeOf: 'song',
-            start: [0, 0, 0, 0, 0],
-            end: [30, 30, 16, 21, 10],
-            link: ['lcOxhH8N3Bo', 'n4RjJKxsamQ', 'QDYfEBY9NM4', 'btPJPFnesV4', 'UbxUSsFXYo4']
-        },
-        {
-            id: 5,
-            name: 'Eurovision',
-            questions: ["För vilket land tävlade denna låt",
-                        "För vilket land tävlade denna låt",
-                        "För vilket land tävlade denna låt",
-                        "För vilket land tävlade denna låt",
-                        "För vilket land tävlade denna låt"],
-            answers: ["Sverige", "Island", "Italien", "Ukraina", "Nederländerna"],
-            typeOf: 'video',
-            start: [5, 83, 0, 0, 52],
-            end: [40, 105, 30, 82],
-            link: ['fELp2fPI8wI', '1zTbVRPh5EI', 'w1f6o1HQBvg', 'U7-dxzp6Jvs', '51u5fnyrGj4']
-        }
-    ]);
-
-
+    const [arrayOf, setArrayOf] = useState([]);
 
     const [round, setRound] = useState(sessionStorage.getItem("currentRound"));
 
@@ -139,10 +20,213 @@ const JeopardyComp = () => {
 
     storageArray = JSON.parse(storageArray);
 
+    useEffect(() => {
+        if(round === "1"){
+            setArrayOf([
+            {
+                id: 0,
+                name: "Ding Dong",
+                questions: ['Låt & Artist?',
+                 "Låt & Artist?",
+                 "Låt & Artist?",
+                  "Låt & Artist?",
+                    "Låt & Artist?"],
+                answers: ["Molly Sanden(Will F), Jaja ding dong", "Ewa & Ewa, Rena rama ding dong", "Axel F, Crazy Frog", "Gunther, Ding dong song", "Lasse Berghagen, Ding dong"],
+                typeOf: 'song',
+                start: [15, 0, 120, 35, 0],
+                end: [45, 30, 150, 65, 70],
+                link: ['PlBUH8zMZng', 'lo1FO2rwPeI', 'k85mRPqvMbE', 'vzkp10zbgMA', 'BN41awBhmsE']
+            },
+            {
+                id: 1,
+                name: "Musikvideos på mute",
+                questions: ["Låt och artist",
+                        "Låt och artist",
+                        "Låt och artist",
+                        "Låt och artist",
+                        "Låt och artist"],
+                answers: ["Magnus Uggla, Kung för en dag", "Justin Bieber, Mistletoe", "Boney M, Rasputin", "Rihanna, Umbrella", "Daft Punk, Around the World"],
+                typeOf: 'video',
+                start: [0, 0, 0, 82, 0],
+                end: [60, 50, 60, 102, 30],
+                link: ['7aOc2fL2pRM', 'LUjn3RpkcKY', '16y1AkoZkmQ', 'CvBfHwUxHIk', 'K0HSD_i2DvA']
+            },
+            {
+                id: 2,
+                name: "Valsen 10",
+                questions: ["Låt och artist",
+                            "Låt och artist",
+                            "Låt och artist",
+                            "Låt och artist",                        
+                            "Låt och artist"
+                            ],
+                answers: ["U2, Beautiful day", "Per Gessle, Här kommer alla känslorna", "Kent, Utan dina andetag", "Tommy Körberg, Stad i ljus", "Mando Diao, Strövtåg i hembygden"],
+                typeOf: 'song',
+                start: [0, 34, 15, 0, 0],
+                end: [30, 55, 60, 40, 50],
+                link: ['co6WMzDOh1o', 'DVHoDQQSSw0', 'tldhkGMysQ0', 'fZ9KSnHZT-s', '_YPqM-MTKCI']
+            },
+            {
+                id: 3,
+                name: "To be continued",
+                questions: [
+                 "Avsluta versen",
+                  "Avsluta versen",
+                  "Avsluta versen",
+                   "Avsluta versen",
+                    "Avsluta versen"],
+                answers: ["No one to hear my prayer", "Mister cool!", "Finns inga känslor kvar", "Säg omelette", "Det gör ont men går ändå"],
+                typeOf: 'video',
+                start: [15, 0, 0, 30, 10],
+                end: [62, 49, 23, 61, 56],
+                link: ['XEjLoHdbVeE', '5EYoV_bDhSc', 'HInYeg78sMU', 'm-VigThmLWg', 'nqE8Um9t8CU']
+            },
+            {
+                id: 4,
+                name: "Världshits",
+                questions: ["Låt och artist",
+                "Låt och artist",
+                 "Låt och artist",
+                   "Låt och artist",
+                    "Låt och artist"],
+                answers: ["Toto, Africa", "Bryan Adams, Heaven", "UB40, Kingston town", "Van Morrison, Brown eyed girl", "Lasse Berghagen, Teddybjörnen Fredriksson"],
+                typeOf: 'song',
+                start: [0, 5, 0, 0, 0],
+                end: [35, 35, 30, 21, 50],
+                link: ['FTQbiNvZqaY', 's6TtwR2Dbjg', '0rJA9lnGcP4', 'UfmkgQRmmeE', 'GwMXz-tpWec']
+            },
+            {
+                id: 5,
+                name: 'Eurovision',
+                questions: ["För vilket land tävlade denna låt",
+                            "För vilket land tävlade denna låt",
+                            "För vilket land tävlade denna låt",
+                            "För vilket land tävlade denna låt",
+                            "För vilket land tävlade denna låt"],
+                answers: ["Sverige", "Österrike", "Danmark", "Ukraina", "Ryssland"],
+                typeOf: 'video',
+                start: [5, 10, 24, 0, 10],
+                end: [40, 30, 54, 52],
+                link: ['-qAkQRczjDI', 'ToqNa0rqUtY', 'k59E7T0H-Us', 'U7-dxzp6Jvs', 'L_dWvTCdDQ4']
+            }
+            ]);
+        }
+        else{
+            setArrayOf([
+                {
+                    id: 0,
+                    name: "Nostalgi",
+                    questions: ["Låt & Artist",
+                    "Låt & Artist",
+                    "Låt & Artist",
+                    "Låt & Artist",
+                    "Låt & Artist"],
+                    answers: ["Avicii, Levels", "Darude, Sandstorm", "Robbie Williams, Feel", "Jason Mraz, I'm Yours", "Owl City, Fireflies"],
+                    typeOf: 'song',
+                    start: [0, 0, 0, 0, 2],
+                    end: [30, 30, 30, 30, 30],
+                    link: ['_ovdm2yX4MA', 'y6120QOlsfU', 'iy4mXZN1Zzk', 'EkHTsc9PU2A', 'psuRGfAaju4']
+                },
+                {
+                    id: 1,
+                    name: "12 + 21 = 121",
+                    questions: ["Smeknamn för larmet som testas måndag 15.00 en gång i kvartalet ... Luuks kompanjon i på spåret",
+                     "Timme när man kan fynda på krogen ... Gammalt tidtagarur med sand",
+                      "Eagle på ett par 3-hål ... Brittiskt pojkband som gjort bästa låten nånsin",
+                      "Gör att man blir diskad på 100 meter ... Fotbollstränaren skickar ut dessa utvalda vid matchstart",
+                       "Jacka som ofta har oranget innerfoder och bars av piloter ... Gammal TV-serie med Steve-O och Johnny Knoxville"],
+                    answers: ["Hesa (Fredrik) Lindström?",
+                     "Happy (Hour)Glass",
+                      "Hole in (One) Direction",
+                       "Tjuv(Start)elva",
+                        "Bomber(Jacka)ss"],
+                    typeOf: '',
+                    start: [],
+                    end: [],
+                    link: []
+                },
+                {
+                    id: 2,
+                    name: "Huvudkaraktärer",
+                    questions: ["Vad heter huvudkaraktären & skådespelaren?",
+                     "Vad heter huvudkaraktären & skådespelaren?",
+                      "Vad heter huvudkaraktären & skådespelaren?",
+                       "Vad heter huvudkaraktären & skådespelaren?",
+                        "Vad heter huvudkaraktären & skådespelaren?"],
+                    answers: ["Marie Antoinette, Kirsten Dunst",
+                     "Frodo Baggins, Elijah Wood",
+                      "James Bond, Daniel Craig",
+                       "Forrest Gump, Tom Hanks",
+                        "Hannibal Lecter, Anthony Hopkins(Clarice, Jodie)"],
+                    typeOf: 'video',
+                    start: [0, 51, 50, 0, 40],
+                    end: [20, 71, 70, 20, 65],
+                    link: ['yBWyKRoh98U', 'HX4KKkSKZAY', 'l1pqswXNAgs', 'ONH-pxBMJu4', 'SoZ1e5kjjcs']   
+                },
+                {
+                    id: 3,
+                    name: "I want to break free",
+                    questions: ["Låt & Tidigare band",
+                     "Låt & Tidigare band",
+                      "Låt & Tidigare band",
+                       "Låt & Tidigare band(Wait for it)",
+                        "Låt & Tidigare band"],
+                    answers: ["Halo, Destiny's Child",
+                     "Can't stop the feeling, *NSYNC",
+                      "Pillowtalk, One Direction",
+                       "Beat it, Jackson 5",
+                        "Englishman in New York, The Police"],
+                    typeOf: 'song',
+                    start: [0, 0, 0, 22, 10],
+                    end: [40, 30, 30, 75, 50],
+                    link: ['bnVUHWCynig', 'ru0K8uYEZWw', 'C_3d6GntKbk', 'oRdxUFDoQe0', 'd27gTrPPAyk']  
+                },
+                {
+                    id: 4,
+                    name: "Så mycket bättre?",
+                    questions: ["Vilka är artisterna?",
+                     "Vilka är artisterna?",
+                      "Vilka är artisterna?",
+                       "Vilka är artisterna?",
+                        "Vilka är artisterna?"],
+                    answers: ["Miriam Bryant & Sven-Bertil Taube",
+                     "Laleh & Timbaktu",
+                      "Darin & Magnus Uggla",
+                       "September & Petter",
+                        "Miss Li & Pugh Rogefeldt"],
+                    typeOf: 'song',
+                    start: [10, 0, 0, 0, 0],
+                    end: [60, 40, 50, 50, 50],
+                    link: ['DbbCAFxNo6Q', 'Yf7Mhkg_EDY', 'GmoYMpck-_k', '0YuqbuTXORc', 'q1KmZDZFC8M']
+                },
+                {
+                    id: 4,
+                    name: "Seriemusik",
+                    questions: ["Vad heter serien?",
+                    "Vad heter serien?",
+                    "Vad heter serien?",
+                    "Vad heter serien?",
+                    "Vad heter serien?"],
+                    answers: ["Familjen Addams",
+                     "Lilla huset på prärien",
+                      "La casa de papel",
+                       "Peaky Blinders",
+                        "True detective"],
+                    typeOf: 'video',
+                    start: [16, 20, 0, 25, 5],
+                    end: [45, 40, 30, 40, 55],
+                    link: ['ZZ5IWRz78DY', '5Nr6yAJ-86s', 'Zx37mfDRpyk', 'VB0mn8Tgz2k', 'FxXRkqXfhYM']
+                },
+            ]);
+        }   
+
+    },[round])
+    
+
     console.log(storageArray);
 
     if(!storageArray.includes(true) && round === numberOfRounds){
-        sessionStorage.setItem("currentQuestion", JSON.stringify(["Final Jeopardy", "Svensk historia", "Denna man som delar förnamn med en känd fransk konung var sveriges första statsminister", "Vem var Louis de Geer?"]))
+        sessionStorage.setItem("currentQuestion", JSON.stringify(["Final Jeopardy", "Svensk musikhistoria", "Vilken är den mest spelade svenska låten någonsin?", "Victor Leksell, Svag", "dSRZ_1ncRhQ"]))
         history.push('/final-category');
     }
 
@@ -157,12 +241,6 @@ const JeopardyComp = () => {
         setRound(2);
         window.location.reload();
     };
-
-  
-    let currentId = 0;
-
-    const valueArray = [200, 400, 600, 800, 1000];
-
     
     const printQuestion = (e) => {
         sessionStorage.setItem("valueOfQ", e.target.textContent)
@@ -204,39 +282,43 @@ const JeopardyComp = () => {
     
     }
 
+    const styleBtn = {
+        width: '260px', height: '130px', marginTop: '10px', fontSize: '25px'
+    }
+
     return (
         <div style={{paddingBottom: '40px', backgroundColor: '#f5f5f5'}}>
                 <Row style={{textAlign: 'center', fontWeight: 'bolder'}}>
                     {arrayOf.map(
                         arrayOf => 
-                            <Col style={{marginLeft: '40px'}}>
-                                <label style={{borderRadius: '10%', marginTop: "5px", width: '250px', height: '80px', fontSize: '18px', textAlign: 'center', paddingTop: '15px'}}>{(arrayOf.name).toUpperCase()}</label>
+                            <Col>
+                                <label style={{borderRadius: '10%', marginTop: "5px", width: '260px', height: '60px', fontSize: '18px', textAlign: 'center', paddingTop: '15px'}}>{(arrayOf.name).toUpperCase()}</label>
                                 <Row>
-                                    <Button variant="info" value={currentId++} key={currentId} id={arrayOf.name} style={{width: '280px', height: '160px', marginTop: '10px', fontSize: '25px'}} onClick={printQuestion}>
+                                    <Button value={currentId++} key={currentId} id={arrayOf.name} style={styleBtn} onClick={printQuestion}>
                                     {storageArray[currentId] === true ? valueArray[0] : ''}
                                     </Button>
                                 </Row>
                                 
                                 <Row>
-                                    <Button variant="info" value={currentId++} key={currentId} id={arrayOf.name} style={{width: '280px', height: '160px', marginTop: '10px', fontSize: '25px'}} onClick={printQuestion}>
+                                    <Button value={currentId++} key={currentId} id={arrayOf.name} style={styleBtn} onClick={printQuestion}>
                                     {storageArray[currentId] === true ? valueArray[1] : ''}
                                     </Button>
                                 </Row>
                                 
                                 <Row>
-                                    <Button variant="info" value={currentId++} key={currentId} id={arrayOf.name} style={{width: '280px', height: '160px', marginTop: '10px', fontSize: '25px'}} onClick={printQuestion}>
+                                    <Button value={currentId++} key={currentId} id={arrayOf.name} style={styleBtn} onClick={printQuestion}>
                                     {storageArray[currentId] === true ? valueArray[2] : ''}
                                     </Button>
                                 </Row>
                                 
                                 <Row>
-                                    <Button variant="info" value={currentId++} key={currentId} id={arrayOf.name} style={{width: '280px', height: '160px', marginTop: '10px', fontSize: '25px'}} onClick={printQuestion}>
+                                    <Button value={currentId++} key={currentId} id={arrayOf.name} style={styleBtn} onClick={printQuestion}>
                                     {storageArray[currentId] === true ? valueArray[3] : ''}
                                     </Button>
                                 </Row>
                                 
                                 <Row>
-                                    <Button variant="info" value={currentId++} key={currentId} id={arrayOf.name} style={{width: '280px', height: '160px', marginTop: '10px', fontSize: '25px'}} onClick={printQuestion}>
+                                    <Button value={currentId++} key={currentId} id={arrayOf.name} style={styleBtn} onClick={printQuestion}>
                                     {storageArray[currentId] === true ? valueArray[4] : ''}
                                     </Button>
                                 </Row>

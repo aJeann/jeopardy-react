@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Row, Col, Card, Button, Container, InputGroup, FormControl } from 'react-bootstrap'
+import { FaNimblr } from 'react-icons/fa';
 import { useHistory } from 'react-router';
 import PlayerCards from './PlayerCards';
 
@@ -15,6 +16,7 @@ const FinalCategory = () => {
     const [p3Bet, setP3Bet] = useState();
     const [p4Bet, setP4Bet] = useState();
     const [p5Bet, setP5Bet] = useState();
+    const numOfPlayers = Number(sessionStorage.getItem("nmbrOfPlayers"));
 
     let p1;let p2;let p3;let p4;let p5;
 
@@ -214,7 +216,7 @@ const FinalCategory = () => {
 
                 <Row style={{marginTop: '200px'}}>
                     <Col>
-                        <Card style={{ width: '18rem', backgroundColor: "green" }}>
+                        <Card style={{ width: '12rem', backgroundColor: "green" }}>
                             <Card.Body>
                                 <Card.Title
                                     id="p1"
@@ -236,7 +238,7 @@ const FinalCategory = () => {
                                         id="p1Bet"
                                         onChange={updateBet}
                                         />
-                                        <Button variant="outline-secondary" id="p1Bet" onClick={saveBet} >
+                                        <Button variant="danger" id="p1Bet" onClick={saveBet} >
                                         Spara
                                         </Button>                                    
                                     </InputGroup>  
@@ -245,7 +247,7 @@ const FinalCategory = () => {
                         </Card>
                     </Col>
                     <Col>
-                        <Card style={{ width: '18rem', backgroundColor: "yellow" }}>
+                        <Card style={{ width: '12rem', backgroundColor: "yellow" }}>
                             <Card.Body>
                             <Card.Title
                                     id="p2"
@@ -266,7 +268,7 @@ const FinalCategory = () => {
                                         id="p2Bet"
                                         onChange={updateBet}
                                         />
-                                        <Button variant="outline-secondary" id="p2Bet" onClick={saveBet}>
+                                        <Button variant="danger" id="p2Bet" onClick={saveBet}>
                                         Spara
                                         </Button>                                    
                                     </InputGroup>                                                                   
@@ -274,100 +276,108 @@ const FinalCategory = () => {
                             </Card.Body>
                         </Card>
                     </Col>    
-                    <Col>
-                        <Card style={{ width: '18rem', backgroundColor: "orange" }}>
-                            <Card.Body>
-                            <Card.Title
-                                    id="p3"
-                                    onClick={removePoints}
-                                    style={{cursor: 'not-allowed'}}
-                                >
-                                {p3Name}
-                                </Card.Title>
-                                
-                                <Card.Text
-                                    id="p3" 
-                                    onClick={handleClick}
-                                    style={{cursor: 'cell'}}
-                                > 
-                                 {sessionStorage.getItem("p3Score")}
-                                <InputGroup className="mb-3">
-                                        <FormControl
-                                        aria-label="Example text with button addon"
-                                        aria-describedby="basic-addon1"
-                                        id="p3Bet"
-                                        onChange={updateBet}
-                                        />
-                                        <Button variant="outline-secondary" id="p3Bet" onClick={saveBet}>
-                                        Spara
-                                        </Button>                                    
-                                    </InputGroup> 
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </Col>    
-                    <Col>
-                        <Card style={{ width: '18rem', backgroundColor: "teal" }}>
-                            <Card.Body>
-                            <Card.Title
-                                    id="p4"
-                                    onClick={removePoints}
-                                    style={{cursor: 'not-allowed'}}
-                                >
-                                    {p4Name}                                
-                                </Card.Title>
-                                <Card.Text
-                                    id="p4" 
-                                    onClick={handleClick}
-                                    style={{cursor: 'cell'}}
-                                >
-                                {sessionStorage.getItem("p4Score")}
-                                <InputGroup className="mb-3">
-                                        <FormControl
-                                        aria-label="Example text with button addon"
-                                        aria-describedby="basic-addon1"
-                                        id="p4Bet"
-                                        onChange={updateBet}
-                                        />
-                                        <Button variant="outline-secondary" id="p4Bet" onClick={saveBet}>
-                                        Spara
-                                        </Button>                                    
-                                    </InputGroup>                            
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </Col>   
-                    <Col>
-                        <Card style={{ width: '18rem', backgroundColor: "teal" }}>
-                            <Card.Body>
-                            <Card.Title
-                                    id="p5"
-                                    onClick={removePoints}
-                                    style={{cursor: 'not-allowed'}}
-                                >
-                                    {p5Name}                                
-                                </Card.Title>
-                                <Card.Text
-                                    id="p5" 
-                                    onClick={handleClick}
-                                    style={{cursor: 'cell'}}
-                                >
-                                {sessionStorage.getItem("p5Score")}
-                                <InputGroup className="mb-3">
-                                        <FormControl
-                                        aria-label="Example text with button addon"
-                                        aria-describedby="basic-addon1"
-                                        id="p5Bet"
-                                        onChange={updateBet}
-                                        />
-                                        <Button variant="outline-secondary" id="p5Bet" onClick={saveBet}>
-                                        Spara
-                                        </Button>                                    
-                                    </InputGroup>                            
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </Col>  
+                    {numOfPlayers > 2 &&
+                        <Col>
+                            <Card style={{ width: '12rem', backgroundColor: "orange" }}>
+                                <Card.Body>
+                                <Card.Title
+                                        id="p3"
+                                        onClick={removePoints}
+                                        style={{cursor: 'not-allowed'}}
+                                    >
+                                    {p3Name}
+                                    </Card.Title>
+                                    
+                                    <Card.Text
+                                        id="p3" 
+                                        onClick={handleClick}
+                                        style={{cursor: 'cell'}}
+                                    > 
+                                    {sessionStorage.getItem("p3Score")}
+                                    <InputGroup className="mb-3">
+                                            <FormControl
+                                            aria-label="Example text with button addon"
+                                            aria-describedby="basic-addon1"
+                                            id="p3Bet"
+                                            onChange={updateBet}
+                                            />
+                                            <Button variant="danger" id="p3Bet" onClick={saveBet}>
+                                            Spara
+                                            </Button>                                    
+                                        </InputGroup> 
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </Col>    
+                    }
+                    {numOfPlayers > 3 && 
+                        <Col>
+                            <Card style={{ width: '12rem', backgroundColor: "teal" }}>
+                                <Card.Body>
+                                <Card.Title
+                                        id="p4"
+                                        onClick={removePoints}
+                                        style={{cursor: 'not-allowed'}}
+                                    >
+                                        {p4Name}                                
+                                    </Card.Title>
+                                    <Card.Text
+                                        id="p4" 
+                                        onClick={handleClick}
+                                        style={{cursor: 'cell'}}
+                                    >
+                                    {sessionStorage.getItem("p4Score")}
+                                    <InputGroup className="mb-3">
+                                            <FormControl
+                                            aria-label="Example text with button addon"
+                                            aria-describedby="basic-addon1"
+                                            id="p4Bet"
+                                            onChange={updateBet}
+                                            />
+                                            <Button variant="danger" id="p4Bet" onClick={saveBet}>
+                                            Spara
+                                            </Button>                                    
+                                        </InputGroup>                            
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </Col>   
+                    }
+                    {numOfPlayers > 4 &&
+                        <Col>
+                            <Card style={{ width: '12rem', backgroundColor: "pink" }}>
+                                <Card.Body>
+                                <Card.Title
+                                        id="p5"
+                                        onClick={removePoints}
+                                        style={{cursor: 'not-allowed'}}
+                                    >
+                                        {p5Name}                                
+                                    </Card.Title>
+                                    <Card.Text
+                                        id="p5" 
+                                        onClick={handleClick}
+                                        style={{cursor: 'cell'}}
+                                    >
+                                    {sessionStorage.getItem("p5Score")}
+                                    <InputGroup className="mb-3">
+                                            <FormControl
+                                            aria-label="Example text with button addon"
+                                            aria-describedby="basic-addon1"
+                                            id="p5Bet"
+                                            onChange={updateBet}
+                                            />
+                                            <Button variant="danger" id="p5Bet" onClick={saveBet}>
+                                            Spara
+                                            </Button>                                    
+                                        </InputGroup>                            
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </Col>  
+                    }                    
+                    
+                    
                 </Row>
             </Container>
                             

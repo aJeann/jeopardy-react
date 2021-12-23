@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
 import * as BSIcons from 'react-icons/bs'
+import ConfettiExplosion from '@reonomy/react-confetti-explosion';
 
 const ResultsComponent = () => {
     const player1 = sessionStorage.getItem("p1Name");
@@ -70,8 +71,13 @@ const ResultsComponent = () => {
     return (
         <div>
             <Container style={{textAlign: 'center', backgroundImage: 'url(https://cdn.pixabay.com/photo/2015/10/28/16/47/cup-1010916_960_720.jpg)', height: '100%'}}>
+                <div style={{overflow: 'visible', marginLeft: '650px', width:'200px', height: '100px', backgroundColor: 'white'}}>
+                <ConfettiExplosion style={{marginLeft: '400px'}} force={0.8} duration={20000} particleCount={800}
+                floorHeight={1700} floorWidth={2600}/>
+                </div>
                 
                 <BSIcons.BsTrophyFill size={40} style={{marginTop: '20px'}}/>
+                
                 <h1>Första plats: {resultsArray[0].name + '(' + resultsArray[0].score + ')'}</h1>
                 <BSIcons.BsFillTrophyFill size={30} style={{marginTop: '10px'}}/>
                 <h2>Andra plats: {resultsArray[1].name + '(' + resultsArray[1].score + ')'}</h2>

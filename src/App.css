@@ -22,10 +22,10 @@ li a {
 }
 
 li a:hover {
-  color: aqua;
+  color: blue;
   text-decoration: underline;
 }
 
 button:hover {
-  transform: scale(1.05) perspective(1px);
+  transform: scale(1.03) perspective(1px);
 }

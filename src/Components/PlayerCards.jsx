@@ -12,6 +12,7 @@ const PlayerCards = () => {
     const [p3Name, setP3Name] = useState(sessionStorage.getItem("p3Name"));
     const [p4Name, setP4Name] = useState(sessionStorage.getItem("p4Name"));
     const [p5Name, setP5Name] = useState(sessionStorage.getItem("p5Name"));
+    const [nmbrOfPlayers] = useState(sessionStorage.getItem("nmbrOfPlayers"));
 
     useEffect(() => {
         playing ? audio.play() : audio.pause();
@@ -165,67 +166,76 @@ const PlayerCards = () => {
                         </Card.Text>                        
                     </Card.Body>
                 </Card>
-            </Row>  
-            <Row style={{marginBottom: '20px'}}>          
-                <Card style={{ width: '18rem', backgroundColor: "orange" }}>
-                    <Card.Body>
-                    <Card.Title
-                            id="p3"
-                            onClick={removePoints}
-                            style={{cursor: 'not-allowed'}}
-                        >
-                        {p3Name}
-                        </Card.Title>
-                        <Card.Text
-                            id="p3" 
-                            onClick={handleClick}
-                            style={{cursor: 'cell'}}
-                        > 
-                        {p3Score}
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
-            </Row>
-            <Row style={{marginBottom: '20px'}}>           
-                <Card style={{ width: '18rem', backgroundColor: "teal" }}>
-                    <Card.Body>
-                    <Card.Title
-                            id="p4"
-                            onClick={removePoints}
-                            style={{cursor: 'not-allowed'}}
-                        >
-                        {p4Name}
-                        </Card.Title>
-                        <Card.Text
-                            id="p4" 
-                            onClick={handleClick}
-                            style={{cursor: 'cell'}}
-                        >
-                        {p4Score}                            
-                        </Card.Text>
-                    </Card.Body>
-                </Card>  
-            </Row>
-            <Row>           
-                <Card style={{ width: '18rem', backgroundColor: "white" }}>
-                    <Card.Body>
-                    <Card.Title
-                            id="p5"
-                            onClick={removePoints}
-                            style={{cursor: 'not-allowed'}}
-                        >
-                        {p5Name}
-                        </Card.Title>
-                        <Card.Text
-                            id="p5" 
-                            onClick={handleClick}
-                            style={{cursor: 'cell'}}
-                        >
-                        {p5Score}                            
-                        </Card.Text>
-                    </Card.Body>
-                </Card>  
-            </Row>
+            </Row> 
+            {nmbrOfPlayers > 2 && 
+                <Row style={{marginBottom: '20px'}}>          
+                    <Card style={{ width: '18rem', backgroundColor: "orange" }}>
+                        <Card.Body>
+                        <Card.Title
+                                id="p3"
+                                onClick={removePoints}
+                                style={{cursor: 'not-allowed'}}
+                            >
+                            {p3Name}
+                            </Card.Title>
+                            <Card.Text
+                                id="p3" 
+                                onClick={handleClick}
+                                style={{cursor: 'cell'}}
+                            > 
+                            {p3Score}
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </Row>
+            }
+            
+            {nmbrOfPlayers > 3 && 
+                <Row style={{marginBottom: '20px'}}>           
+                    <Card style={{ width: '18rem', backgroundColor: "teal" }}>
+                        <Card.Body>
+                        <Card.Title
+                                id="p4"
+                                onClick={removePoints}
+                                style={{cursor: 'not-allowed'}}
+                            >
+                            {p4Name}
+                            </Card.Title>
+                            <Card.Text
+                                id="p4" 
+                                onClick={handleClick}
+                                style={{cursor: 'cell'}}
+                            >
+                            {p4Score}                            
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>  
+                </Row>
+            }
+            
+            {nmbrOfPlayers > 4 &&
+                <Row>           
+                    <Card style={{ width: '18rem', backgroundColor: "white" }}>
+                        <Card.Body>
+                        <Card.Title
+                                id="p5"
+                                onClick={removePoints}
+                                style={{cursor: 'not-allowed'}}
+                            >
+                            {p5Name}
+                            </Card.Title>
+                            <Card.Text
+                                id="p5" 
+                                onClick={handleClick}
+                                style={{cursor: 'cell'}}
+                            >
+                            {p5Score}                            
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>  
+                </Row>
+            }
+            
         </>
     )
 }

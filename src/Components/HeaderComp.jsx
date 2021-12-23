@@ -12,13 +12,14 @@ const HeaderComponent = () => {
     }
     const handleShow = () => setShow(true);
     const [seconds, setSeconds] = useState(sessionStorage.getItem("seconds"));
-    const [rounds, setRounds] = useState(sessionStorage.getItem("rounds"));
+    const [rounds, setRounds] = useState(Number(sessionStorage.getItem("rounds")));
     const [currentRound, setCurrentRound] = useState();
     const [player1, setPlayer1] = useState();
     const [player2, setPlayer2] = useState();
     const [player3, setPlayer3] = useState();
     const [player4, setPlayer4] = useState();
     const [player5, setPlayer5] = useState();
+    const [nmbrOfPlayers, setNmbrOfPlayers] = useState();
 
     useEffect(() => {
         setCurrentRound(sessionStorage.getItem("currentRound"))
@@ -44,6 +45,7 @@ const HeaderComponent = () => {
         sessionStorage.setItem("p3Name", "Player 3");
         sessionStorage.setItem("p4Name", "Player 4");
         sessionStorage.setItem("p5Name", "Player 5");
+        sessionStorage.setItem("nmbrOfPlayers", 3)
     }
 
     const resetGame = () => {
@@ -101,6 +103,16 @@ const HeaderComponent = () => {
            
     }
 
+    const updatePlayers = (e) => {
+        console.log(e.target.value);
+        setNmbrOfPlayers(e.target.value);
+    }
+
+    const savePlayers = () => {
+        console.log(nmbrOfPlayers);
+        sessionStorage.setItem("nmbrOfPlayers", nmbrOfPlayers)
+    }
+
     return (
         <div>
             <header>
@@ -142,7 +154,7 @@ const HeaderComponent = () => {
                 <InputGroup className="mb-3">
                     <Form.Label>Ändra timer:</Form.Label>
                     <FormControl
-                    placeholder="30"
+                    placeholder={sessionStorage.getItem("seconds")}
                     aria-label="Uppdatera fråge-timer"
                     aria-describedby="basic-addon2"
                     onChange={updateValue}
@@ -152,9 +164,9 @@ const HeaderComponent = () => {
                     </Button>
                 </InputGroup>
                 <InputGroup className="mb-3">
-                    <Form.Label>Antalet rundor: </Form.Label>
+                    <Form.Label>Antal rundor: (1-2) </Form.Label>
                     <FormControl
-                    placeholder="Mellan 1-2"
+                    placeholder={sessionStorage.getItem("rounds")}
                     aria-label="Uppdatera fråge-timer"
                     aria-describedby="basic-addon2"
                     onChange={updateRounds}
@@ -164,9 +176,22 @@ const HeaderComponent = () => {
                     </Button>
                 </InputGroup>
                 <InputGroup className="mb-3">
+                    <Form.Label>Antal spelare: (2-5)</Form.Label>
+                    <FormControl
+                    placeholder={sessionStorage.getItem("nmbrOfPlayers")}
+                    aria-label="Uppdatera fråge-timer"
+                    aria-describedby="basic-addon2"
+                    onChange={updatePlayers}
+                    />
+                    <Button variant="outline-secondary" id="button-addon2" onClick={savePlayers}>
+                    Spara
+                    </Button>
+                </InputGroup>
+
+                <InputGroup className="mb-3">
                     <Form.Label>Spelare 1: </Form.Label>
                     <FormControl
-                    placeholder="Byt namn"
+                    placeholder={sessionStorage.getItem("p1Name")}
                     id="p1"
                     aria-label="Uppdatera fråge-timer"
                     aria-describedby="basic-addon2"
@@ -179,7 +204,7 @@ const HeaderComponent = () => {
                 <InputGroup className="mb-3">
                     <Form.Label>Spelare 2: </Form.Label>
                     <FormControl
-                    placeholder="Byt namn"
+                    placeholder={sessionStorage.getItem("p2Name")}
                     id="p2"
                     aria-label="Uppdatera fråge-timer"
                     aria-describedby="basic-addon2"
@@ -192,7 +217,7 @@ const HeaderComponent = () => {
                 <InputGroup className="mb-3">
                     <Form.Label>Spelare 3: </Form.Label>
                     <FormControl
-                    placeholder="Byt namn"
+                    placeholder={sessionStorage.getItem("p3Name")}
                     id="p3"
                     aria-label="Uppdatera fråge-timer"
                     aria-describedby="basic-addon2"
@@ -205,7 +230,7 @@ const HeaderComponent = () => {
                 <InputGroup className="mb-3">
                     <Form.Label>Spelare 4: </Form.Label>
                     <FormControl
-                    placeholder="Byt namn"
+                    placeholder={sessionStorage.getItem("p4Name")}
                     id="p4"
                     aria-label="Uppdatera fråge-timer"
                     aria-describedby="basic-addon2"
@@ -218,7 +243,7 @@ const HeaderComponent = () => {
                 <InputGroup className="mb-3">
                     <Form.Label>Spelare 5: </Form.Label>
                     <FormControl
-                    placeholder="Byt namn"
+                    placeholder={sessionStorage.getItem("p5Name")}
                     id="p5"
                     aria-label="Uppdatera fråge-timer"
                     aria-describedby="basic-addon2"
