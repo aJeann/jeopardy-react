@@ -55,8 +55,8 @@ const JeopardyComp = () => {
                         "Chernobyl explosion, 1986",
                         "Titanic lämnar hamnen, 1912"],
                 typeOf: 'video',
-                start: [10, 2940, 340, 190,210],
-                end: [40, 3030, 400, 270,280],
+                start: [10, 2940, 340, 190, 210],
+                end: [40, 3030, 400, 270, 280],
                 link: ['CI5xbXZ4w34', 'S9HdPi9Ikhk','JJEUtX2_GwI', 'xulAgMNK5Jk', 'jkjjxioYIuE']
             },
             {
@@ -256,7 +256,7 @@ const JeopardyComp = () => {
     console.log(storageArray);
 
     if(!storageArray.includes(true) && round === numberOfRounds){
-        sessionStorage.setItem("currentQuestion", JSON.stringify(["Final Jeopardy", "Julens historia", "Vilket århundrade började man fira jul i Sverige?", "1100-talet(tog fart på 1800-talet)", "joWd2P-6keM"]))
+        sessionStorage.setItem("currentQuestion", JSON.stringify(["Final Jeopardy", "Julens historia", "Vilket år visades Kalle Anka på julafton för första gången?", "1960", "joWd2P-6keM"]))
         history.push('/final-category');
     }
 
