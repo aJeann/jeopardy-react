@@ -9,6 +9,7 @@ import QuestionComponent from './Components/QuestionComponent';
 import FinalJeopardy from './Components/FinalJeopardy';
 import ResultsComponent from './Components/ResultsComponent';
 import FinalCategory from './Components/FinalCategory';
+import PaSparet from './Components/PaSparetComponent'
 
 const App = () => {
 
@@ -22,6 +23,7 @@ const App = () => {
               <Route path="/final-jeopardy" component = {FinalJeopardy}></Route>
               <Route path="/results" component = {ResultsComponent}></Route>
               <Route path="/final-category" component = {FinalCategory}></Route>
+              <Route path="/pa-sparet" component={PaSparet}></Route>
             </Switch>
         
       </Router>
