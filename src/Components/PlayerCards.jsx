@@ -28,7 +28,9 @@ const PlayerCards = () => {
         p3 = sessionStorage.getItem("p3Score");
         p4 = sessionStorage.getItem("p4Score");
         p5 = sessionStorage.getItem("p5Score");
-
+    }
+    else {
+        p1 = 0; p2 = 0; p3 = 0; p4 = 0; p5 = 0;
     }
 
     const [p1Score, setP1Score] = useState(Number(p1));
@@ -46,36 +48,36 @@ const PlayerCards = () => {
         switch(e.target.id){
             case 'p1': 
                 {
-                    setP1Score(p1Score + 100);
-                    totalV = p1Score + 100;
+                    setP1Score(p1Score + valueOfQ);
+                    totalV = p1Score + valueOfQ;
                     sessionStorage.setItem("p1Score", totalV);
                     break;
                             }            
             case 'p2':
                 {
-                    setP2Score(p2Score + 100);
-                    totalV = p2Score + 100;
+                    setP2Score(p2Score + valueOfQ);
+                    totalV = p2Score + valueOfQ;
                     sessionStorage.setItem("p2Score", totalV);
                     break;
                             }   
             case 'p3': 
                 {
-                    setP3Score(p3Score + 100);
-                    totalV = p3Score + 100;
+                    setP3Score(p3Score + valueOfQ);
+                    totalV = p3Score + valueOfQ;
                     sessionStorage.setItem("p3Score", totalV);
                     break;
                             }   
             case 'p4':
                 {
-                    setP4Score(p4Score + 100);
-                    totalV = p4Score + 100;
+                    setP4Score(p4Score + valueOfQ);
+                    totalV = p4Score + valueOfQ;
                     sessionStorage.setItem("p4Score", totalV);
                     break;
                             }   
             case 'p5':
                 {
-                    setP5Score(p5Score + 100);
-                    totalV = p5Score + 100;
+                    setP5Score(p5Score + valueOfQ);
+                    totalV = p5Score + valueOfQ;
                     sessionStorage.setItem("p5Score", totalV);
                     break;
                             }
@@ -88,36 +90,36 @@ const PlayerCards = () => {
         switch(e.target.id){
             case 'p1': 
                 {
-                    setP1Score(p1Score - 100);
-                    totalV = p1Score - 100;
+                    setP1Score(p1Score - valueOfQ);
+                    totalV = p1Score - valueOfQ;
                     sessionStorage.setItem("p1Score", totalV);
                     break;
                             }            
             case 'p2':
                 {
-                    setP2Score(p2Score - 100);
-                    totalV = p2Score - 100;
+                    setP2Score(p2Score - valueOfQ);
+                    totalV = p2Score - valueOfQ;
                     sessionStorage.setItem("p2Score", totalV);
                     break;
                             }   
             case 'p3': 
                 {
-                    setP3Score(p3Score - 100);
-                    totalV = p3Score - 100;
+                    setP3Score(p3Score - valueOfQ);
+                    totalV = p3Score - valueOfQ;
                     sessionStorage.setItem("p3Score", totalV);
                     break;
                             }   
             case 'p4':
                 {
-                    setP4Score(p4Score - 100);
-                    totalV = p4Score - 100;
+                    setP4Score(p4Score - valueOfQ);
+                    totalV = p4Score - valueOfQ;
                     sessionStorage.setItem("p4Score", totalV);
                     break;
                             }   
             case 'p5':
                 {
-                    setP5Score(p5Score - 100);
-                    totalV = p5Score - 100;
+                    setP5Score(p5Score - valueOfQ);
+                    totalV = p5Score - valueOfQ;
                     sessionStorage.setItem("p5Score", totalV);
                     break;
                 }   

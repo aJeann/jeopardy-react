@@ -4,10 +4,7 @@ import { ProgressBar } from 'react-bootstrap';
 
 const Timer = ({toggle, time} ) => {
   const [seconds, setSeconds] = useState(time);
-  const [isActive, setIsActive] = useState(true);
-
-  console.log(toggle);
-  console.log(time);
+  const [isActive, setIsActive] = useState(toggle);
 
     useEffect(() => {
         let interval = null;
@@ -22,7 +19,7 @@ const Timer = ({toggle, time} ) => {
             setPlaying(!playing)
         } 
         return () => clearInterval(interval);
-    }, [isActive, seconds]);
+    }, [isActive, seconds, toggle]);
 
     const [audio] = useState(new Audio(WrongSound))
     const [playing, setPlaying] = useState(false);

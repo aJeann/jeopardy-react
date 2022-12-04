@@ -10,6 +10,7 @@ import FinalJeopardy from './Components/FinalJeopardy';
 import ResultsComponent from './Components/ResultsComponent';
 import FinalCategory from './Components/FinalCategory';
 import PaSparet from './Components/PaSparetComponent'
+import PhotoReveal from './Components/PhotoReveal';
 
 const App = () => {
 
@@ -24,6 +25,7 @@ const App = () => {
               <Route path="/results" component = {ResultsComponent}></Route>
               <Route path="/final-category" component = {FinalCategory}></Route>
               <Route path="/pa-sparet" component={PaSparet}></Route>
+              <Route path="/photo-reveal" component={PhotoReveal}></Route>
             </Switch>
         
       </Router>

@@ -1,6 +1,8 @@
 import React, { useState, useEffect} from 'react'
 import { Button, Modal, InputGroup, FormControl, Form } from 'react-bootstrap';
 import Sidebar from './SideBar';
+import Dropdown from 'react-bootstrap/Dropdown';
+import { questionsList } from './Questions/Questions';
 
 const HeaderComponent = () => {
 
@@ -48,12 +50,15 @@ const HeaderComponent = () => {
         sessionStorage.setItem("nmbrOfPlayers", 3)
     }
 
-    const resetGame = () => {
+    const resetArray = () => {
         for (let index = 0; index < 30; index++) {
             if(index === 0) tempArray.push(false)
             tempArray.push(true);    
             sessionStorage.setItem("stateArray", JSON.stringify(tempArray))
         }
+    }
+
+    const resetGame = () => {
         sessionStorage.setItem("p1Score", 0); sessionStorage.setItem("p2Score", 0); sessionStorage.setItem("p3Score", 0); sessionStorage.setItem("p4Score", 0);
         sessionStorage.setItem("p5Score", 0); 
 
@@ -113,26 +118,30 @@ const HeaderComponent = () => {
         sessionStorage.setItem("nmbrOfPlayers", nmbrOfPlayers)
     }
 
+    const options = ["1", "2"];
+
+    const defaultOption = options[0];
+
     return (
         <div>
             <header>
                 <nav className="navbar navbar-fixed-top navbar-expand-md bg-dark">
                     <div className="container">
                         <ul className="mr-auto">
-                            <li><a href="/" className="navbar-brand" style={{paddingTop: '20px'}}>Home</a></li>
+                            <li><a href="/" className="navbar-brand" style={{paddingTop: '20px', color: "white"}}>Home</a></li>
                             <li>
-                                <a href="/" className="navbar-brand" style={{paddingTop: '20px'}} 
-                                onClick={resetGame}
+                                <a href="/" className="navbar-brand" style={{paddingTop: '20px', color: "white"}} 
+                                onClick={() => {resetGame(); resetArray();}}
                                 >
                                 Återställ spel
                                 </a>
                             </li>
                             <li>
-                                <a href='#' className="navbar-brand" style={{paddingTop: '20px'}}
+                                <a href='#' className="navbar-brand" style={{paddingTop: '20px', color: "white"}}
                                 onClick={handleShow}>
                                     Inställningar
                                 </a>
-                            </li>
+                            </li>                                                                                           
                         </ul>
                         {/* <ul className="justify-content-end">
                             <li>
@@ -140,6 +149,26 @@ const HeaderComponent = () => {
                             </li>
                         </ul> */}
                     </div>
+
+                
+                    <Dropdown>
+                        <Dropdown.Toggle variant="success" id="dropdown-basic">
+                            Välj spelplan
+                        </Dropdown.Toggle>
+
+                        <Dropdown.Menu>
+                            {questionsList.map(questionsList =>
+                                <Dropdown.Item href="/" onClick={(e) => {
+                                    sessionStorage.setItem("boardId", questionsList);          
+                                    resetArray();                   
+                                    }}>{questionsList}
+                                </Dropdown.Item>
+                            )}
+                            
+                        </Dropdown.Menu>
+                    </Dropdown>
+                                  
+                         
                     <li>
                         <Sidebar />         
                     </li> 
