@@ -418,11 +418,11 @@ export const questions = [[
         {
             id: 1,
             name: "Original eller inte? X",
-            questions: ['Låt och artist? + Originalartist?',
-            'Låt och artist? + Originalartist?',
-            'Låt och artist? + Originalartist?',
-            'Låt och artist? + Originalartist?',
-            'Låt och artist? + Originalartist?',
+            questions: ['Låt och artist? + Originalartist(?)',
+            'Låt och artist? + Originalartist(?)',
+            'Låt och artist? + Originalartist(?)',
+            'Låt och artist? + Originalartist(?)',
+            'Låt och artist? + Originalartist(?)',
                         ],
             answers: [
             'I will always love you, Whitney Houston(Dolly Parton original)',
