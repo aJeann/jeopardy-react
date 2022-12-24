@@ -162,7 +162,7 @@ const FinalJeopardy = () => {
                 )}
                 
 
-                <Row style={{marginTop: '200px'}}>
+               {/*  <Row style={{marginTop: '200px'}}>
                     <Col>
                         <Card style={{ width: '13rem', backgroundColor: "green" }}>
                             <Card.Body>
@@ -316,7 +316,7 @@ const FinalJeopardy = () => {
                         </Col> 
                     }
                     
-                </Row>
+                </Row> */}
 
                 {showButton && (
                     

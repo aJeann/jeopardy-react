@@ -33,7 +33,7 @@ const JeopardyComp = () => {
     },[round])
 
     if(!storageArray.includes(true) && round === numberOfRounds){
-        sessionStorage.setItem("currentQuestion", JSON.stringify(["Final Jeopardy", "Julens historia", "Vilket år visades Kalle Anka på julafton för första gången?", "1960", "joWd2P-6keM"]))
+        sessionStorage.setItem("currentQuestion", JSON.stringify(["Final Jeopardy", "Guesstimate", "Antalet tangenter på ett piano + 100 kilo i pounds + En fullvuxen saltvattenskrokodil + Tyngsta människan någonsin + En tändsticka + En kubikmeter snö", "2022", "joWd2P-6keM"]))
         history.push('/final-category');
     }
 
