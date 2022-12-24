@@ -345,7 +345,7 @@ export const questions = [[
         typeOf: 'photoReveal',
         start: [0],
         end: [30],
-        link: ['https://eu-central-1.linodeobjects.com/tasteline/2021/11/Julskinka5-foto-Nurlan-Emir-Mathem-800x800.jpg',
+        link: ['https://i0.wp.com/lindasbakskola.se/app/uploads/sites/4/2021/12/IMG_5435.jpg?resize=861%2C1024&ssl=1',
          'https://www.hollywoodreporter.com/wp-content/uploads/2017/06/gettyimages-691030284-h_2017.jpg?w=1296',
         'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Goran_Persson%2C_Sveriges_statsminister%2C_under_nordiskt_statsministermotet_i_Reykjavik_2005.jpg/800px-Goran_Persson%2C_Sveriges_statsminister%2C_under_nordiskt_statsministermotet_i_Reykjavik_2005.jpg',
         'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Stockholms_stadshus_september_2011.jpg/1200px-Stockholms_stadshus_september_2011.jpg',
