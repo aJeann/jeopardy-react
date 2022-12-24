@@ -1,7 +1,5 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { ImagePixelated } from "react-pixelate"
-import image from './images/image.jpg'
 import TimerComp from './TimerComp';
 import { Container, Button } from 'react-bootstrap'
 import { useHistory } from 'react-router-dom';
@@ -30,7 +28,7 @@ const PhotoReveal = () => {
             interval = setInterval(() => {
             if(seconds > 0 && activeState === true){
 
-                for(let i = 0; i < 100; i++){
+                for(let i = 0; i < 150; i++){
                     let x = Math.floor(Math.random() * Array.from(Array(1600)).length);
                     randomArray.push(x);
                 }
@@ -43,15 +41,18 @@ const PhotoReveal = () => {
         
     }, [activeState, seconds]);
 
-    const img = new Image();
-    img.src = image;
+    let qArray = sessionStorage.getItem("currentQuestion");
+    qArray = JSON.parse(qArray);
+
+    let imgSrc = qArray[6];
+
 
     return (
         <>
             <div style={{display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "black"}}
                 onClick={HandleClick}>
                 <div style={{width: "600px", height: "600px", position: "relative", overflow: "-moz-hidden-unscrollable"}}>
-                    <img src={image} style={{objectFit: "contain", height: "100%", width: "100%"}}></img>
+                    <img src={imgSrc} style={{objectFit: "contain", height: "100%", width: "100%"}}></img>
                     {!reveal && (
                     <div style={{display: "grid", gridTemplateRows: "repeat(40, 1fr)", gridTemplateColumns: "repeat(40, 1fr)", width: "600px", height: "600px", position: "absolute", top: "0", left: "0"}}>
                         {Array.from(Array(1600).keys()).map((i) => {

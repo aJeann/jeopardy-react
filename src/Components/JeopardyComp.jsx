@@ -6,7 +6,7 @@ import { questions } from './Questions/Questions';
 const JeopardyComp = () => {
 
     let currentId = 0;
-    const valueArray = [200, 400, 600, 800, 1000];
+    const valueArray = [200, 200, 200, 200, 200];
 
     const [arrayOf, setArrayOf] = useState([]);
     const [boardId, setBoardId] = useState(sessionStorage.getItem("boardId"));
@@ -50,7 +50,7 @@ const JeopardyComp = () => {
     };
     
     const printQuestion = (e) => {
-        sessionStorage.setItem("valueOfQ", e.target.textContent)
+        sessionStorage.setItem("valueOfQ", 200)
         let tempNum = Number(e.target.value);
         console.log(tempNum);
         storageArray[tempNum+1] = false;
@@ -98,7 +98,7 @@ const JeopardyComp = () => {
     }
 
     const styleBtn = {
-        width: '260px', height: '130px', marginTop: '10px', fontSize: '25px'
+        width: '260px', height: '130px', marginTop: '10px', fontSize: '25px', backgroundColor: 'red', border: '1px solid red'
     }
 
     return (
@@ -116,31 +116,31 @@ const JeopardyComp = () => {
                                     <label style={{borderRadius: '10%', marginTop: "5px", width: '260px', height: '60px', fontSize: '18px', paddingTop: '15px'}}>{(arrayOf.name).toUpperCase()}</label>
                                     <Row>
                                         <Button value={currentId++} key={currentId} id={arrayOf.name} style={styleBtn} onClick={printQuestion}>
-                                        {storageArray[currentId] === true ? valueArray[0] : ''}
+                                        {storageArray[currentId] === true ? '🎅' : ''}
                                         </Button>
                                     </Row>
                                     
                                     <Row>
                                         <Button value={currentId++} key={currentId} id={arrayOf.name} style={styleBtn} onClick={printQuestion}>
-                                        {storageArray[currentId] === true ? valueArray[1] : ''}
+                                        {storageArray[currentId] === true ? '⛄' : ''}
                                         </Button>
                                     </Row>
                                     
                                     <Row>
                                         <Button value={currentId++} key={currentId} id={arrayOf.name} style={styleBtn} onClick={printQuestion}>
-                                        {storageArray[currentId] === true ? valueArray[2] : ''}
+                                        {storageArray[currentId] === true ? '🦌' : ''}
                                         </Button>
                                     </Row>
                                     
                                     <Row>
                                         <Button value={currentId++} key={currentId} id={arrayOf.name} style={styleBtn} onClick={printQuestion}>
-                                        {storageArray[currentId] === true ? valueArray[3] : ''}
+                                        {storageArray[currentId] === true ? '🎄' : ''}
                                         </Button>
                                     </Row>
                                     
                                     <Row>
                                         <Button value={currentId++} key={currentId} id={arrayOf.name} style={styleBtn} onClick={printQuestion}>
-                                        {storageArray[currentId] === true ? valueArray[4] : ''}
+                                        {storageArray[currentId] === true ? '🏂' : ''}
                                         </Button>
                                     </Row>
                                 </Col>

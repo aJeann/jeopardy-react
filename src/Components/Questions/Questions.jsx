@@ -1,4 +1,4 @@
-export const questionsList = [0, 1];
+export const questionsList = [0, 1, 2, 3];
 
 export const questions = [[
     {
@@ -258,4 +258,265 @@ export const questions = [[
     start: [0, 0, 0, 0, 0],
     end: [30, 40, 30, 30, 30],
     link: ['zTfKcRcibyg', 'O7lZFiYgkfE', '_V2sBURgUBI', 'TZE9gVF1QbA', '2Q18TnxZxLI']
-}]];
+}],
+[
+    {
+        questionID: 2,
+    },
+    {
+        id: 0,
+        name: "Mest lyssnade 18-22",
+        questions: ["Låt och artist + följdfråga",
+        "Låt och artist",
+        "Låt och artist",
+        "Låt och artist + följdfråga",
+        "Låt och artist + följdfråga",
+                    ],
+        answers: ['As it was, Harry Styles',
+        'Levitating, Dua Lipa',
+        'Blinding Lights, The Weeknd',
+        'Old town road, Lil Nax X',
+        'Gods plan, Drake'        
+                    ],
+        typeOf: 'song',
+        start: [0, 0, 25, 0, 36],
+        end: [60, 60, 60, 40, 76],
+        link: ['H5v3kku4y6Q','TUVcZfQe-Kw','4NRXx6U8ABQ', 'r7qovpFAGrQ','xpVfcZ0ZcFM']
+    },
+    {
+        name: "På G",
+        questions: ["Vart är vi på g?",
+        "Vart är vi på g?",
+        "Vart är vi på g?",
+        "Vart är vi på g?",
+        "Vart är vi på g?"
+        ],
+        answers: ["USA",
+        "Schweiz",
+        "Brasilien",
+        "Kina",
+        "Niger" 
+        ],
+        typeOf: 'paSparet',
+        start: [],
+        end: [],
+        link: {
+            0: ["https://www.google.com/maps/embed?pb=!4v1671836159642!6m8!1m7!1s4y3IyfDqN6hzt9lx0c9tDw!2m2!1d46.90620151464032!2d-123.2933698656621!3f217.92089275662244!4f-0.8204518743951468!5f0.7820865974627469",
+            "https://www.google.com/maps/embed?pb=!4v1671836476534!6m8!1m7!1s3wWWLdYF4_z_HBlbwVj-Bg!2m2!1d33.36318841507264!2d-117.5413351974051!3f48.69275142456173!4f-0.7401739828308109!5f0.7820865974627469",
+            "https://www.google.com/maps/embed?pb=!4v1671836660119!6m8!1m7!1sQiD_5IvNwLQYzNzoAiUgTg!2m2!1d40.70747541368848!2d-73.99858548247201!3f294.8565570574564!4f2.049620334183686!5f0.7820865974627469"
+            ],
+            1: ["https://www.google.com/maps/embed?pb=!4v1671836821138!6m8!1m7!1s0a4D4gkgzCez4iQhjhFvRA!2m2!1d46.20422562335607!2d6.142239124988107!3f305.6415441432492!4f5.383068715274575!5f0.857056215449439"],
+            2: ["https://www.google.com/maps/embed?pb=!4v1671836968906!6m8!1m7!1s9m8F8R8Ow9LKc5Yy4J6lTg!2m2!1d-15.80104358205234!2d-47.87796900339251!3f338.89007155773106!4f33.050099337398564!5f0.7820865974627469"],
+            3: ["https://www.google.com/maps/embed?pb=!4v1671837298244!6m8!1m7!1sTJV-YIyL6HnOtxYyp8c1Ng!2m2!1d-33.8780913231743!2d151.2040016590271!3f358.44196918156587!4f-1.6832063895313922!5f1.5366184664772655"],
+            4: ["https://www.google.com/maps/embed?pb=!4v1671837440483!6m8!1m7!1s7b0nG1IngTN6AiQlvej2Vw!2m2!1d13.02219469412136!2d5.2408790659848!3f279.1542913057499!4f7.763863915488372!5f0.7820865974627469"]
+        }
+    },
+    {
+        id: 2,
+        name: "Gissa kategorin",
+        questions: ['Låt & Artist','Låt & Artist','Låt & Artist','Låt & Artist','Låt & Artist',
+                    ],
+        answers: ['Jolene, Dolly Parton',
+        'Delilah, Tom Jones',
+        'Before he cheats, Carrie Underwood',
+        'Sam Smith, I am not the only one',
+        'Maroon 5, Wake up call'
+        ],
+        typeOf: 'song',
+        start: [0,0,0,0,0],
+        end: [60,60,60,60 ,60],
+        link: ['Ixrje2rXLMA', 'BvRUblJ_hqM','WaSy8yy-mr8','CchcWjYZjc8','AW_zrqpJDPI']   
+    },
+    {
+        id: 3,
+        name: "Vem eller vad?",
+        questions: ["Vad?",
+        "Vem?",
+        "Vem?",
+        "Vad?",
+        "Vad?"
+        ],
+        answers: ['En julskinka',
+        'Jim Carrey',
+        'Göran Persson',
+        'Stockholms Stadshus',
+        'En golfboll'
+                    ],
+        typeOf: 'photoReveal',
+        start: [0],
+        end: [30],
+        link: ['https://eu-central-1.linodeobjects.com/tasteline/2021/11/Julskinka5-foto-Nurlan-Emir-Mathem-800x800.jpg',
+         'https://www.hollywoodreporter.com/wp-content/uploads/2017/06/gettyimages-691030284-h_2017.jpg?w=1296',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Goran_Persson%2C_Sveriges_statsminister%2C_under_nordiskt_statsministermotet_i_Reykjavik_2005.jpg/800px-Goran_Persson%2C_Sveriges_statsminister%2C_under_nordiskt_statsministermotet_i_Reykjavik_2005.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Stockholms_stadshus_september_2011.jpg/1200px-Stockholms_stadshus_september_2011.jpg',
+        'https://whitelabelgolf.com/wp-content/uploads/2018/05/single-ball-1.png']  
+    },
+    {
+        id: 4,
+        name: "To be continued",
+        questions: ["Sjung vidare + följdfråga",
+        "Sjung vidare + följdfråga",
+        "Sjung vidare + följdfråga",
+        "Sjung vidare + följdfråga",
+        "Sjung vidare + följdfråga",
+                    ],
+        answers: ['I cant help falling in love (with you)',
+        'Vi bor 28 gangstergrabbar i en',
+        'Vad gör hon med en sån som han',
+        'Last christmas',
+        'Youre out of luck'        
+         ],
+        typeOf: 'song',
+        start: [0,0,25,0,0],
+        end: [22,15,47,18,27],
+        link: ['5V430M59Yn8','7hQ6kz6UaAE','uW7dhEpJmy0', 'E8gmARGvPlI','co6WMzDOh1o']
+    },
+    {
+        id: 4,
+        name: "Seriemusik",
+        questions: ["Vad heter serien?",
+        "Vad heter serien?",
+        "Vad heter serien?",
+        "Vad heter serien?",
+        "Vad heter serien?",
+                    ],
+        answers: ['The white lotus',
+        'La casa de papel(Money heist)',
+        'Squid game',
+        'Stranger things',
+        'Breaking bad'
+                ],
+        typeOf: 'song',
+        start: [0, 0, 0,0,0],
+        end: [60, 60, 15,40,15],
+        link: ['q8Ea2tysrrc', 'Zx37mfDRpyk', 'OgDraEI7i8Y', '-RcPZdihrp4', '3U6PSWyv5sc']
+    }],
+    [
+        {
+            questionID: 3,
+        },
+        {
+            id: 0,
+            name: "Gissa kategorin",
+            questions: ["Låt & Artist",
+            "Låt & Artist",
+            "Låt & Artist",
+            "Låt & Artist",
+            "Låt & Artist",
+                        ],
+            answers: ['Let you down, NF',
+            'Kids, MGMT',
+            'Thunderstruck, AC/DC',
+            'Losing my religion, R.E.M',
+            'Genius, LSD',
+                        ],
+            typeOf: 'song',
+            start: [0],
+            end: [60],
+            link: ['fe4EK4HSPkI', 'v2AC41dglnM']
+        },
+        {
+            id: 1,
+            name: "Original eller inte? X",
+            questions: ['Låt och artist? + Originalartist?',
+            'Låt och artist? + Originalartist?',
+            'Låt och artist? + Originalartist?',
+            'Låt och artist? + Originalartist?',
+            'Låt och artist? + Originalartist?',
+                        ],
+            answers: [
+            'I will always love you, Whitney Houston(Dolly Parton original)',
+            'Säg mig var du står, Little Jinder(Anita Meyer original, Carola också OK)',
+            'Hallelujah, Jeff Buckley(Leonard Cohen original)',
+            'Mambo No 5, Lou Bega(Pérez Prado original)',
+            'Girls just want to have fun, Cyndi Laupers(Robert Hazard original)'
+                        ],
+            typeOf: 'song',
+            start: [],
+            end: [],
+            link: []
+        },
+        {
+            id: 2,
+            name: "Var i världen?",
+            questions: ['Land & Plats?',
+            'Land & Plats?',
+            'Land & Plats?',
+            'Land & Plats?',
+            'Land & Plats?',
+                        ],
+            answers: [
+                'Italien, Colosseum',
+                'Kina, Kinesiska muren',
+                'Italien, Pisa',   
+                'Egypten, Giza',  
+                'USA, Yosemite NP'
+                        ],
+            typeOf: 'video',
+            start: [0],
+            end: [60],
+            link: ['ne0OagUqhWs', 'k6bs2fwbUlI', 'eJeF7hDB0UA', 'EaQr917lRgI', '9fJEFi3ccwI']   
+        },
+        {
+            id: 3,
+            name: "12 + 21 = 121 X",
+            questions: ["?",
+            "?",
+            "?",
+            "?",
+            "?",
+            ],
+            answers: ['Herre(gud)skelov',
+            'Pythagoras (sats)umas',
+            'Milk(shake) it off',
+            'Instagrammys',
+            'Rött Vin Diesel',
+            ],
+            typeOf: '',
+            start: [0],
+            end: [30],
+            link: ['re5veV2F7eY', '', 'XmttZ-BnwaI', 'GRxofEmo3HA', ]  
+        },
+        {
+            id: 4,
+            name: "Konditorns X",
+            questions: ["Original låt och artist?",
+            "Original låt och artist?",
+            "Original låt och artist?",
+            "Original låt och artist?",
+            "Original låt och artist?",
+                        ],
+            answers: ['Oops! I did it again - Britney Spears',
+            'Karma Chameleon, Culture Club',
+            'Born to be alive, Patrick Hernandez',
+            'Uptown girl, Billy Joel',
+            'Its a heartache, Bonnie Tyler',          
+                    ],
+            typeOf: 'song',
+            start: [0],
+            end: [19],
+            link: ['smTVQkGj4NA']
+        },
+        {
+            id: 4,
+            name: "Filmer och serier",
+            questions: ["Låt, Artist/Band & Film",
+            "Låt, Artist/Band & Film",
+            "Låt, Artist/Band & Film",
+            "Låt, Artist/Band & Film",
+            "Låt, Artist/Band & Film",
+                        ],
+            answers: [
+                'My heart will go on, Celine Dion, Titanic',
+                'Shallow, Lady Gaga+Bradley C, A star is born',
+                'I aint worried, One republic, Top Gun: Maverick',
+                'Kung fu fighting, Cee-Lo Green, Kung Fu Panda',
+                'I dont wanna miss a thing, Aerosmith, Armageddon'
+                    ],
+            typeOf: 'song',
+            start: [0],
+            end: [30],
+            link: ['q8Ea2tysrrc', '', '', '', 'ujMxXOHJloI']
+        }
+    ]
+];

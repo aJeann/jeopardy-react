@@ -67,9 +67,9 @@ const QuestionComponent = () => {
                 {qArray[3] === 'video' && 
                 <div style={{width: '1090px', height: '60px', position: 'absolute', backgroundColor: 'black', marginLeft: '100px'}}></div>}
                 <YouTube videoId={qArray[6]} opts={options}></YouTube>
-               
                 <TimerComp toggle={activeState} time={seconds}/>
 
+            
                 {showButton && (
                     <Button style={{marginTop: '20px'}} onClick={() => {history.push('/')}}>
                     Fortsätt

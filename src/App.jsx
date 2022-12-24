@@ -4,7 +4,6 @@ import './App.css';
 import HeaderComponent from './Components/HeaderComp';
 import JeopardyComp from './Components/JeopardyComp';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import FooterComponent from './Components/FooterComponent';
 import QuestionComponent from './Components/QuestionComponent';
 import FinalJeopardy from './Components/FinalJeopardy';
 import ResultsComponent from './Components/ResultsComponent';
