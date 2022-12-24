@@ -1,6 +1,9 @@
 {
   "name": "jeopardy-react",
   "version": "0.1.0",
+  "engines": {
+    "node": "14.x"
+  },
   "private": true,
   "dependencies": {
     "@reonomy/react-confetti-explosion": "^1.0.3",
