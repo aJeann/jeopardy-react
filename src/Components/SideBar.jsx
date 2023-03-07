@@ -9,7 +9,7 @@ import PlayerCards from './PlayerCards'
 
 const Sidebar = () => {
 
-    const [sidebar, setSidebar] = useState(false)
+    const [sidebar, setSidebar] = useState(false);
 
     const showSidebar = () => {
         setSidebar(!sidebar);
