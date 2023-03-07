@@ -1,8 +1,7 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 import * as FaIcons from 'react-icons/fa'
 import * as AiIcons from 'react-icons/ai'
-import { useState } from 'react/cjs/react.development'
 import './Sidebar.css'
 import PlayerCards from './PlayerCards'
 
