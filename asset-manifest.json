@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/react-jeopardy/static/css/main.d9bc754a.chunk.css",
+    "main.js": "/react-jeopardy/static/js/main.83810b89.chunk.js",
+    "main.js.map": "/react-jeopardy/static/js/main.83810b89.chunk.js.map",
+    "runtime-main.js": "/react-jeopardy/static/js/runtime-main.7bcd9a29.js",
+    "runtime-main.js.map": "/react-jeopardy/static/js/runtime-main.7bcd9a29.js.map",
+    "static/css/2.cabd08d6.chunk.css": "/react-jeopardy/static/css/2.cabd08d6.chunk.css",
+    "static/js/2.c87a0480.chunk.js": "/react-jeopardy/static/js/2.c87a0480.chunk.js",
+    "static/js/2.c87a0480.chunk.js.map": "/react-jeopardy/static/js/2.c87a0480.chunk.js.map",
+    "static/js/3.cba48e41.chunk.js": "/react-jeopardy/static/js/3.cba48e41.chunk.js",
+    "static/js/3.cba48e41.chunk.js.map": "/react-jeopardy/static/js/3.cba48e41.chunk.js.map",
+    "index.html": "/react-jeopardy/index.html",
+    "static/css/2.cabd08d6.chunk.css.map": "/react-jeopardy/static/css/2.cabd08d6.chunk.css.map",
+    "static/css/main.d9bc754a.chunk.css.map": "/react-jeopardy/static/css/main.d9bc754a.chunk.css.map",
+    "static/js/2.c87a0480.chunk.js.LICENSE.txt": "/react-jeopardy/static/js/2.c87a0480.chunk.js.LICENSE.txt",
+    "static/media/Pling.af210ab9.mp3": "/react-jeopardy/static/media/Pling.af210ab9.mp3",
+    "static/media/Wrong-answer-sound-effect.493cc9f4.mp3": "/react-jeopardy/static/media/Wrong-answer-sound-effect.493cc9f4.mp3"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7bcd9a29.js",
+    "static/css/2.cabd08d6.chunk.css",
+    "static/js/2.c87a0480.chunk.js",
+    "static/css/main.d9bc754a.chunk.css",
+    "static/js/main.83810b89.chunk.js"
+  ]
+}
