@@ -22,6 +22,7 @@ const HeaderComponent = () => {
     const [player4, setPlayer4] = useState();
     const [player5, setPlayer5] = useState();
     const [nmbrOfPlayers, setNmbrOfPlayers] = useState();
+    const [finalJeopardy, setFinalJeopardy] = useState();
 
     useEffect(() => {
         setCurrentRound(sessionStorage.getItem("currentRound"))
@@ -92,6 +93,14 @@ const HeaderComponent = () => {
         setPlayer4(e.target.value);
         if(e.target.id === 'p5')
         setPlayer5(e.target.value);
+    }
+
+    const updateFinalJeopardy = (e) => {
+        setFinalJeopardy(e.target.value);
+    }
+
+    const saveFinalJeopardy = (e) => {
+        sessionStorage.setItem("finalJeopardy", finalJeopardy)
     }
 
     const savePlayerNames = (e) => {
@@ -177,7 +186,7 @@ const HeaderComponent = () => {
             </header>
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Modal heading</Modal.Title>
+                    <Modal.Title>Inställningar</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                 <InputGroup className="mb-3">
@@ -216,7 +225,6 @@ const HeaderComponent = () => {
                     Spara
                     </Button>
                 </InputGroup>
-
                 <InputGroup className="mb-3">
                     <Form.Label>Spelare 1: </Form.Label>
                     <FormControl
@@ -282,9 +290,21 @@ const HeaderComponent = () => {
                     Spara
                     </Button>
                 </InputGroup>
+                <InputGroup className="mb-3">
+                    <Form.Label>Final Jeopardy?</Form.Label>
+                    <FormControl
+                    placeholder={"false"}
+                    id="finalJeopardy"
+                    aria-label="Uppdatera fråge-timer"
+                    aria-describedby="basic-addon2"
+                    onChange={updateFinalJeopardy}
+                    />
+                    <Button variant="outline-secondary" id="p5" onClick={saveFinalJeopardy}>
+                    Spara
+                    </Button>
+                </InputGroup>
                 </Modal.Body>
                 <Modal.Footer>
-                    
                     <Button variant="secondary" onClick={handleClose}>
                         Close
                     </Button>

@@ -15,6 +15,7 @@ const JeopardyComp = () => {
 
     const tempArray = [];
     const numberOfRounds = sessionStorage.getItem("rounds");
+    const finalJeopardy = sessionStorage.getItem("finalJeopardy");
 
     const history = useHistory();
     
@@ -32,7 +33,11 @@ const JeopardyComp = () => {
         }  
     },[round])
 
-    if(!storageArray.includes(true) && round === numberOfRounds){
+    if(!storageArray.includes(true) && round === numberOfRounds && finalJeopardy === "false") {
+        history.push('/results');
+    }
+
+    if(!storageArray.includes(true) && round === numberOfRounds && finalJeopardy === "true"){
         sessionStorage.setItem("currentQuestion", JSON.stringify(["Final Jeopardy", "Guesstimate", "Antalet tangenter på ett piano + 100 kilo i pounds + En fullvuxen saltvattenskrokodil + Tyngsta människan någonsin + En tändsticka + En kubikmeter snö", "2022", "joWd2P-6keM"]))
         history.push('/final-category');
     }
@@ -59,6 +64,7 @@ const JeopardyComp = () => {
         if(tempNum < 5){
             chosenQ = [arrayOf[1].name, arrayOf[1].questions[tempNum], arrayOf[1].answers[tempNum], arrayOf[1].typeOf, arrayOf[1].start[tempNum], arrayOf[1].end[tempNum], arrayOf[1].link[tempNum]];
             sessionStorage.setItem("currentQuestion", JSON.stringify(chosenQ));
+            localStorage.setItem("photoCarouselData", arrayOf[1]);
         }
         else if(tempNum > 4 && tempNum < 10 ){
             tempNum = tempNum - 5;
@@ -69,32 +75,37 @@ const JeopardyComp = () => {
             tempNum = tempNum - 10;
             chosenQ = [arrayOf[3].name, arrayOf[3].questions[tempNum], arrayOf[3].answers[tempNum], arrayOf[3].typeOf, arrayOf[3].start[tempNum], arrayOf[3].end[tempNum], arrayOf[3].link[tempNum]];
             sessionStorage.setItem("currentQuestion", JSON.stringify(chosenQ));  
+            localStorage.setItem("photoCarouselData", arrayOf[3]);
         }
         else if(tempNum > 14 && tempNum < 20 ){
             tempNum = tempNum - 15;
             chosenQ = [arrayOf[4].name, arrayOf[4].questions[tempNum], arrayOf[4].answers[tempNum], arrayOf[4].typeOf, arrayOf[4].start[tempNum], arrayOf[4].end[tempNum], arrayOf[4].link[tempNum]];
             sessionStorage.setItem("currentQuestion", JSON.stringify(chosenQ));
+            localStorage.setItem("photoCarouselData", arrayOf[4]);
         }
         else if(tempNum > 19 && tempNum < 25){
             tempNum = tempNum - 20;
             chosenQ = [arrayOf[5].name, arrayOf[5].questions[tempNum], arrayOf[5].answers[tempNum], arrayOf[5].typeOf, arrayOf[5].start[tempNum], arrayOf[5].end[tempNum], arrayOf[5].link[tempNum]];
             sessionStorage.setItem("currentQuestion", JSON.stringify(chosenQ));
+            localStorage.setItem("photoCarouselData", arrayOf[5]);
         }
         else{
             tempNum = tempNum - 25;
             chosenQ = [arrayOf[6].name, arrayOf[6].questions[tempNum], arrayOf[6].answers[tempNum], arrayOf[6].typeOf, arrayOf[6].start[tempNum], arrayOf[6].end[tempNum], arrayOf[6].link[tempNum]];
             sessionStorage.setItem("currentQuestion", JSON.stringify(chosenQ));
+            localStorage.setItem("photoCarouselData", arrayOf[6]);
         }
 
         console.log(chosenQ[3]);
 
         if(chosenQ[3] === "paSparet") history.push('/pa-sparet');
         else if(chosenQ[3] === "photoReveal") history.push('/photo-reveal');
+        else if(chosenQ[3] === "photoCarousel") history.push('/photo-carousel');
+        
+        else if(chosenQ[3] === "photoQuestion") history.push('/photo-question');
         else {
             history.push('/question');
         }
-      
-    
     }
 
     const styleBtn = {

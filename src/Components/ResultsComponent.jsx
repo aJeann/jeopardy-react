@@ -1,7 +1,8 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Container } from 'react-bootstrap'
 import * as BSIcons from 'react-icons/bs'
 import ConfettiExplosion from '@reonomy/react-confetti-explosion';
+import YouTube from 'react-youtube';
 
 const ResultsComponent = () => {
     const player1 = sessionStorage.getItem("p1Name");
@@ -17,6 +18,8 @@ const ResultsComponent = () => {
     const player5Score = sessionStorage.getItem("p5Score");
 
     const numOfPlayers = sessionStorage.getItem("numOfPlayers");
+
+    const [autoplay, setAutoplay] = useState(1);
 
     const resultsArray = [];
 
@@ -66,7 +69,14 @@ const ResultsComponent = () => {
 
     resultsArray.reverse();
 
-    console.log(resultsArray);
+    const options = {
+        height: 10,
+        width: 20,
+        playerVars: {
+            autoplay: 1,
+            mute: 0
+        },
+    };
 
     return (
         <div>
@@ -89,6 +99,8 @@ const ResultsComponent = () => {
                         height: 5
                     }}
                 />
+
+            <YouTube videoId={'attUrDwfdr8'} opts={options}></YouTube>
 
             </Container>
         </div>

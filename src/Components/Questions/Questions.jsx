@@ -1,4 +1,4 @@
-export const questionsList = [0, 1, 2, 3];
+export const questionsList = [0, 1, 2, 3, 4];
 
 export const questions = [[
     {
@@ -517,6 +517,137 @@ export const questions = [[
             start: [0],
             end: [30],
             link: ['q8Ea2tysrrc', '', '', '', 'ujMxXOHJloI']
+        }
+    ],
+    [
+        {
+            questionID: 4,
+        },
+        {
+            id: 0,
+            name: "Mest spelade 1970-2010(FTK)",
+            questions: ["Låt & Artist",
+                        "Låt & Artist",
+                        "Låt & Artist",
+                        "Låt & Artist",
+                        "Låt & Artist",
+                        ],
+            answers: ['Happy, Pharrell',
+            'Wonderwall, Oasis',
+            'Africa, Toto',
+            'Bohemian Rapsody, Queen',
+            'Mr. Brightside, The Killers',
+                        ],
+            typeOf: 'song',
+            start: [0, 13, 0, 0, 0],
+            end: [30, 43, 30, 30, 30],
+            link: ['ZbZSe6N_BXs', 'vU05Eksc_iM', 'FTQbiNvZqaY', 'fJ9rUzIMcZQ', 'gGdGFtwCNBE']
+        },
+        {
+            id: 1,
+            name: "Vittneskonfrontation",
+            questions: ['QuestionImages/vittne1q.png',
+                        'QuestionImages/vittne2q.png',
+                        'QuestionImages/vittne3q.png',
+                        'QuestionImages/vittne4q.png',
+                        'QuestionImages/vittne5q.png',
+                        ],
+            answers: ['QuestionImages/vittne1a.png',
+            'QuestionImages/vittne2a.png',
+            'QuestionImages/vittne3a.png',
+            'QuestionImages/vittne4a.png',
+            'QuestionImages/vittne5a.png',
+                        ],
+            typeOf: 'photoQuestion',
+            start: [],
+            end: [],
+            link: []
+        },
+        {
+            id: 2,
+            name: "När hände det?",
+            questions: ['Vilket år grundades Handelsbanken?',
+            'Vilket år sjönk Titanic?',
+            'Vilket år invigdes Stockholms tunnelbana?',
+            'Vilket år kördes det första Vasaloppet?',
+            'Vilket år började iPhone säljas i Sverige?',
+                        ],
+            answers: [
+                '1871',
+                '1912',
+                '1950',   
+                '1922',  
+                '2008'
+                        ],
+            typeOf: '',
+            start: [0],
+            end: [60],
+            link: ['ne0OagUqhWs', 'k6bs2fwbUlI', 'eJeF7hDB0UA', 'EaQr917lRgI', '9fJEFi3ccwI']   
+        },
+        {
+            id: 3,
+            name: "12+21=1(2)1",
+            questions: ["a upphöjt till två plus b upphöjt till två är lika med c upphöjt till två + Småcitrus-frukt nära besläktad med clementin och mandarin",
+            "Mjölkbaserad dryck som ofta avnjuts på snabbmatsrestaurang + Populär låt av Taylor Swift",
+            "Populär fotodelningsapp även kallad IG + Betraktas som musikens motsvarighet till filmvärldens Oscar-utmärkelse",
+            "Populär dryck som får sin färg från blå skal + Känd för sin roll som Dominic Toretto i The Fast and the Furious",
+            "Religiöst hoppsan/jösses + Religiöst lyckligtvis/som väl är",
+            ],
+            answers: [
+            'Pythagoras (sats)umas',
+            'Milk(shake) it off',
+            'Insta(gram)my',
+            'Rött (Vin) Diesel',
+            'Herre(gud)skelov',
+            ],
+            typeOf: '',
+            start: [0],
+            end: [30],
+            link: []  
+        },
+        {
+            id: 4,
+            name: "Vem gömmer sig?(FTK)",
+            questions: ["Vem är det?",
+            "Vem är det?",
+            "Vem är det?",
+            "Vem är det?",
+            "Vem är det?"],
+            answers: ['Zlatan Ibrahimovic',
+                        'Charlotte Kalla',
+                        'Nalle Puh',
+                        'Johan Glans',
+                        'Selma Lagerlöf'
+                    ],
+            typeOf: 'photoReveal',
+            start: [0],
+            end: [30],
+            link: ['https://idrottsgalan.se/wp-content/uploads/2015/11/manlige2016_ibrahimovic_570x321-570x321.jpg',
+                    'https://upload.wikimedia.org/wikipedia/commons/d/d7/20190228_FIS_NWSC_Seefeld_Medal_Ceremony_Team_Sweden_850_5868_Charlotte_Kalla.jpg',
+                'https://metromode.se/files/2017/09/nallepuh.jpg',
+            'https://yt3.googleusercontent.com/ytc/AL5GRJXZ85OEgYUsP-oBxDUB3SdFCLmMM0tg6rljtoNQ=s900-c-k-c0x00ffffff-no-rj',
+        'https://nordicwomensliterature.net/wp-content/uploads/sites/2/2017/01/writer-selma-portraet.jpg']
+        },
+        {
+            id: 4,
+            name: "Vad heter filmen?",
+            questions: ['?','?','?','?','?'],
+            answers: [
+                'Avatar',
+                'The Shawshank Redemption',                               
+                'Interstellar',
+                'Casablanca',
+                '12 Years a slave'
+                    ],
+            typeOf: 'photoCarousel',
+            start: [0],
+            end: [10],
+            link: [['https://images4.alphacoders.com/758/thumb-1920-75844.jpg', 'https://www.looper.com/img/gallery/an-avatar-comic-shows-what-happened-to-jakes-human-body-before-the-way-of-water/l-intro-1671483166.jpg', 'https://ichef.bbci.co.uk/news/976/cpsprodpb/122B4/production/_87202447_alamy_avatar3_976.jpg', 'https://cached-images.bonnier.news/gcs/bilder/dn-mly/4b5cf00f-729c-4c71-8a5d-b3b5ca1cf6b7.jpeg'],
+            ['https://m.media-amazon.com/images/M/MV5BMjMyN2Y3YjEtMGU1ZC00ZjNiLTkxOTYtY2M0YzE1YzQwNjI2XkEyXkFqcGdeQXVyNjgzMDQ4MzQ@._V1_.jpg', 'https://www.slashfilm.com/img/gallery/frank-darabont-sees-tim-robbins-as-the-highlight-of-the-shawshank-redemption/l-intro-1670707605.jpg', 'https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/02/09/09/ShawshankRedempt_184Pyxurz.jpg', 'https://www.looper.com/img/gallery/the-shawshank-redemption-deleted-scenes-you-never-saw/l-intro-1610992971.jpg'],
+            ['https://www.wired.com/wp-content/uploads/2014/10/1d_shelves_f.png', 'https://metro.co.uk/wp-content/uploads/2015/04/mm1-e1429271504595.png', 'https://sfanytime-images-prod-http2.secure2.footprint.net/MEDIAM/4879ca25-d6e3-48c1-a012-a3e700a022a2_MEDIAM_dd32bae7-3983-475e-89b4-86ea15292723.jpg?w=1125&fm=pjpg&s=7fa7ccd73ad21c09d6753f19ff492ec1', 'https://m.media-amazon.com/images/M/MV5BMTc0MjI0NzI0MV5BMl5BanBnXkFtZTgwMjIyODgxMzE@._V1_.jpg'],
+            ['https://cdn.britannica.com/36/90536-050-5C560533/Humphrey-Bogart-Claude-Rains-Paul-Henreid-Ingrid.jpg', 'https://gubbeserfilmdotcom.files.wordpress.com/2016/07/casablanca1.jpg', 'https://images.squarespace-cdn.com/content/v1/602ed59739921e7204e22756/1620078322105-X2KSRVEYN15EDGH6U5SQ/Casablanca+Bogart+Rains+Airport.jpg', 'https://is2-ssl.mzstatic.com/image/thumb/Features124/v4/56/38/07/563807b6-c321-d0ae-985f-082b519665fa/mzl.ytuxtjtk.png/1200x675mf.jpg'],
+          ['https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1492466751/articles/2013/10/16/michael-fassbender-opens-up-about-12-years-a-slave-religion-and-assassin-s-creed/131015-stern-fassbender-tease_cl3vl7', 'https://sfanytime-images-prod-http2.secure2.footprint.net/MEDIAM/cda6c5f2-d7c4-423a-af12-a2ba01017e27_MEDIAM_202e2ed8-cea4-4a01-85aa-9a1b38077c72.jpg?w=1125&fm=pjpg&s=0b9defc9b560573ec6362af60d304e63', 'https://pyxis.nymag.com/v1/imgs/77a/ad3/8f4014e0060fe167dcb72b41add50418b6-17-12-years-a-slave-brad-pitt.2x.h473.w710.jpg', 'https://cdn.britannica.com/62/172962-050-66DB8036/Solomon-Northup-Edwin-Epps-men-Chiwetel-Ejiofor.jpg']
+            ] 
         }
     ]
 ];
