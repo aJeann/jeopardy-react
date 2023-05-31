@@ -62,11 +62,7 @@ const PhotoQuestion = () => {
                 src={questionAnswered ? qArray[1] : qArray[2]} 
                 width={1000}
                 onClick={HandleClick}
-            />
-
-                <TimerComp toggle={activeState} time={seconds}/>
-
-            
+            />            
                 {showButton && (
                     <Button style={{marginTop: '20px'}} onClick={() => {history.push('/')}}>
                     Fortsätt

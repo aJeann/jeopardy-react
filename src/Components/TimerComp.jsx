@@ -3,7 +3,7 @@ import WrongSound from '../misc/Wrong-answer-sound-effect.mp3'
 import { ProgressBar } from 'react-bootstrap';
 
 const Timer = ({toggle, time} ) => {
-  const [seconds, setSeconds] = useState(30);
+  const [seconds, setSeconds] = useState(5);
   const [isActive, setIsActive] = useState(toggle);
 
     useEffect(() => {
@@ -25,6 +25,10 @@ const Timer = ({toggle, time} ) => {
     const [playing, setPlaying] = useState(false);
 
     useEffect(() => {
+        console.log("volym");
+        console.log(audio.volume);
+        audio.volume = 0.1;
+        console.log(audio.volume);
         playing ? audio.play() : audio.pause();
     },
     [playing]
@@ -34,7 +38,7 @@ const Timer = ({toggle, time} ) => {
     <div style={{marginTop: '100px'}}>
       <div className="time">
         <h1 style={{color: 'white'}}>{seconds}</h1>
-        <ProgressBar animated variant={seconds > 10 ? "success" : "danger"} max={30} now={seconds}/>
+        <ProgressBar animated variant={seconds > 10 ? "success" : "danger"} max={5} now={seconds}/>
       </div>      
     </div>
   );

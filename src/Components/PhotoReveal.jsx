@@ -75,7 +75,6 @@ const PhotoReveal = () => {
                     <Button onClick={() => {
                         setActive(!activeState);
                     }}>{activeState? "II" : ">>"}</Button>
-                <TimerComp toggle={activeState} time={seconds}/>  
                 {showButton && (
                     <Button style={{marginTop: '20px'}} onClick={() => {history.push('/')}}>
                         Fortsätt

@@ -109,7 +109,7 @@ const JeopardyComp = () => {
     }
 
     const styleBtn = {
-        width: '260px', height: '130px', marginTop: '10px', fontSize: '25px', backgroundColor: 'red', border: '1px solid red'
+        width: '260px', height: '130px', marginTop: '10px', fontSize: '25px', backgroundColor: 'blue', border: '1px solid black'
     }
 
     return (
@@ -127,31 +127,31 @@ const JeopardyComp = () => {
                                     <label style={{borderRadius: '10%', marginTop: "5px", width: '260px', height: '60px', fontSize: '18px', paddingTop: '15px'}}>{(arrayOf.name).toUpperCase()}</label>
                                     <Row>
                                         <Button value={currentId++} key={currentId} id={arrayOf.name} style={styleBtn} onClick={printQuestion}>
-                                        {storageArray[currentId] === true ? '🎅' : ''}
+                                        {storageArray[currentId] === true ? '100' : ''}
                                         </Button>
                                     </Row>
                                     
                                     <Row>
                                         <Button value={currentId++} key={currentId} id={arrayOf.name} style={styleBtn} onClick={printQuestion}>
-                                        {storageArray[currentId] === true ? '⛄' : ''}
+                                        {storageArray[currentId] === true ? '200' : ''}
                                         </Button>
                                     </Row>
                                     
                                     <Row>
                                         <Button value={currentId++} key={currentId} id={arrayOf.name} style={styleBtn} onClick={printQuestion}>
-                                        {storageArray[currentId] === true ? '🦌' : ''}
+                                        {storageArray[currentId] === true ? '300' : ''}
                                         </Button>
                                     </Row>
                                     
                                     <Row>
                                         <Button value={currentId++} key={currentId} id={arrayOf.name} style={styleBtn} onClick={printQuestion}>
-                                        {storageArray[currentId] === true ? '🎄' : ''}
+                                        {storageArray[currentId] === true ? '400' : ''}
                                         </Button>
                                     </Row>
                                     
                                     <Row>
                                         <Button value={currentId++} key={currentId} id={arrayOf.name} style={styleBtn} onClick={printQuestion}>
-                                        {storageArray[currentId] === true ? '🏂' : ''}
+                                        {storageArray[currentId] === true ? '500' : ''}
                                         </Button>
                                     </Row>
                                 </Col>

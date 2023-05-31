@@ -31,8 +31,8 @@ const QuestionComponent = () => {
 
     useEffect(() => {
         if(qArray[3] === 'song'){
-            setHeight(10);
-            setWidth(15);
+            setHeight(325);
+            setWidth(520);
             setAutoplay(0);
         }
         if(qArray[3] === 'video'){
@@ -66,10 +66,18 @@ const QuestionComponent = () => {
                 <h1 style={{color: 'white', paddingTop: '5%', fontSize: '60px', cursor: 'help', animation: 'ease-in'}} onClick={HandleClick}>{questionAnswered ? qArray[1] : qArray[2]}</h1>
                 {qArray[3] === 'video' && 
                 <div style={{width: '1090px', height: '60px', position: 'absolute', backgroundColor: 'black', marginLeft: '100px'}}></div>}
-                <YouTube videoId={qArray[6]} opts={options}></YouTube>
-                <TimerComp toggle={activeState} time={seconds}/>
-
-            
+                
+                {qArray[3] === "video" && (<YouTube videoId={qArray[6]} opts={options}></YouTube>)}
+                {qArray[3] === "song" && (
+                <div style={{display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: "black"}}>
+                     <div style={{width: "600px", height: "500px", position: "relative", overflow: "-moz-hidden-unscrollable", backgroundColor:"black"}}>
+                     {qArray[3] === "song" && (<div style={{position: "absolute", top: "0", height: "290px", width: "100%", zIndex: "999", backgroundColor: "black"}}></div>)}
+                         <YouTube videoId={qArray[6]} opts={options}></YouTube>
+                         
+                     </div>                           
+                 </div>
+                )}               
+                
                 {showButton && (
                     <Button style={{marginTop: '20px'}} onClick={() => {history.push('/')}}>
                     Fortsätt
