@@ -55,7 +55,8 @@ const JeopardyComp = () => {
     };
     
     const printQuestion = (e) => {
-        sessionStorage.setItem("valueOfQ", 200)
+        const num = Number(e.target.innerText);
+        if(typeof num === "number" && num > 0) sessionStorage.setItem("valueOfQ", Number(e.target.innerText))
         let tempNum = Number(e.target.value);
         console.log(tempNum);
         storageArray[tempNum+1] = false;

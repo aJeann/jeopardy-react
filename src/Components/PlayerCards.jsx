@@ -41,7 +41,7 @@ const PlayerCards = () => {
 
      
     const handleClick = (e) => {
-        
+        audio.volume = 0.1;
         audio.play();
         let valueOfQ = Number(sessionStorage.getItem("valueOfQ"));
         let totalV;
